@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<body>
+    <header class="header-container">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pag/sobremi.html">Sobre mi</a></li>
+                <li><a href="pag/proyectos.html">Proyectos</a></li>
+                <li><a href="pag/servicions.html">Servicios</a></li>
+                <li><a href="pag/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="headerbar">
+                <a href="" class="logo">
+                    <h1></h1>
+                </a>
+                <div class="toggle">
+                    <button class="header-hamburguesa">
+                        <span class="header-hamburguesa-line"></span>
+                        <span class="header-hamburguesa-line"></span>
+                        <span class="header-hamburguesa-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner" id="banner">
+        <main class="content">
+            <div class="imgBx">
+                <img src="./img/whachmen.jpg" alt="Retrato">
+            </div>
+            <h3>Romano Napoleon</h3>
+            <p>Soy Napoleon y este es mi oficial portafolio web</p>
+            <div class="block-cv block-btn-cv">
+                <!--La verdad el tipo de boton mas facil de crear al color se le agregbackground: #F283A5;
+                            box-shadow: 6px 6px 20px -1px 'color a eleccion', -6px -6px 20px -1px 'color a eleccion'; 
+                                    y a lo hora de hacer que se undo solo le comocas un insert al inicio de cada sombra-->
+                <a href="#">DOWNLOAD CV</a>
+            </div>
+            <ul class="socialMedia">
+                <li><a href="#"><i aria-hidden="true" class="fa fa-google"></i> </a></li>
+                <span></span>
+                <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i> </a></li>
+                <span></span>
+                <li><a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i> </a></li>
+                <span></span>
+                <li><a href="#"><i aria-hidden="true" class="fa fa-github"></i> </a></li>
+            </ul>
+        </main>
+    </section>
+    <contacto></contacto>
+    <footer></footer>
+
+
+    <script>
+        let headerbar = document.querySelector('.headerbar');
+        let nav = document.querySelector(' .nav');
+        let main = document.querySelector(' .main');
+        let banner = document.querySelector(' .banner');
+        let toggle = document.querySelector('.toggle');
+        toggle.onclick = function () {
+            toggle.classList.toggle('active');
+            headerbar.classList.toggle('active');
+            nav.classList.toggle('active');
+            main.classList.toggle('active');
+            banner.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
