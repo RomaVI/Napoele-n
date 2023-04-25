@@ -4,8 +4,6 @@
     width: 100%;
 }
 
-
-
 .nav {
     position: fixed;
     width: 300px;
@@ -19,139 +17,109 @@
     overflow: hidden;
     transition: width 0.5s;
     z-index: 100000;
+
+    &.active {
+        width: 0;
+    }
+
+    ul {
+        /*La pos relative tiene la propiedad de que mantiene un flujo normal del documento lo que guarda su pocicion y mantiene la distancia entre el borde del elemento al borde de su contenedor en la direccion correspondientes*/
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 40px;
+
+        li {
+            /*Pongo position relative en todo para que se mantenga una jerarquia*/
+            position: relative;
+            width: 100%;
+            list-style: none;
+
+            a {
+                /*se puede utilizar "z-index" para controlar su elevaciÃ³n en relaciÃ³n con otros elementos. cuando se usa con postion relative*/
+                position: relative;
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+                /*Izq y derecha */
+                white-space: normal;
+                /*"white-space:normal;" es una propiedad CSS que define cÃ³mo se deben manejar los espacios en blanco, en el caso de normal significa que cualquier espacio en blanco adicional, como tabulaciones, espacios y saltos de lÃ­nea, se reducen a un solo espacio. AdemÃ¡s, el texto se ajusta automÃ¡ticamente al ancho del contenedor en el que se encuentra, lo que puede dar lugar a lÃ­neas de texto mÃ¡s largas o mÃ¡s cortas segÃºn la resoluciÃ³n de la pantalla o el tamaÃ±o del contenedor.*/
+                display: flex;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $black;
+                font-weight: 500;
+                letter-spacing: 2px;
+                opacity: 0.5;
+
+                &:hover {
+                    /*Recordar sin el hover disminui su opacidad o trasparencia y aqui la aumento*/
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
 
-.nav.active {
-    width: 0;
-}
+header {
+    .main {
+        position: absolute;
+        width: calc(100vw - 300px);
+        left: 300px;
+        background: $white;
+        min-height: 100vh;
 
+        &.active {
+            width: calc(100vw - 0px);
+            left: 0px;
 
-.nav ul {
-    /*La pos relative tiene la propiedad de que mantiene un flujo normal del documento lo que guarda su pocicion y mantiene la distancia entre el borde del elemento al borde de su contenedor en la direccion correspondientes*/
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 40px;
-}
+            .headerbar {
+                width: calc(100vw - 0px);
+                left: 0px;
+            }
+        }
 
-.nav ul li {
-    /*Pongo position relative en todo para que se mantenga una jerarquia*/
-    position: relative;
-    width: 100%;
-    list-style: none;
-}
+        .headerbar {
+            position: fixed;
+            top: 0;
+            width: calc(100vw - 300px);
+            left: 300px;
+            background: $white;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: $sombra;
+            height: 60px;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+            transition: width 0.5s, left 0.5s;
 
-.nav ul li a {
-    /*se puede utilizar "z-index" para controlar su elevaciÃ³n en relaciÃ³n con otros elementos. cuando se usa con postion relative*/
-    position: relative;
-    display: block;
-    width: 100%;
-    margin: 10px
-        /*top y bot*/
-        0
-        /*Izq y derecha */
-    ;
-    white-space: normal
-        /*"white-space:normal;" es una propiedad CSS que define cÃ³mo se deben manejar los espacios en blanco, en el caso de normal significa que cualquier espacio en blanco adicional, como tabulaciones, espacios y saltos de lÃ­nea, se reducen a un solo espacio. AdemÃ¡s, el texto se ajusta automÃ¡ticamente al ancho del contenedor en el que se encuentra, lo que puede dar lugar a lÃ­neas de texto mÃ¡s largas o mÃ¡s cortas segÃºn la resoluciÃ³n de la pantalla o el tamaÃ±o del contenedor.*/
-    ;
-    display: flex;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $black;
-    font-weight: 500;
-    letter-spacing: 2px;
-    opacity: 0.5;
-}
+            &.active {
+                width: calc(100vw - 0px);
+                left: 0px;
+            }
 
-.nav ul li a:hover {
-    /*Recordar sin el hover disminui su opacidad o trasparencia y aqui la aumento*/
-    opacity: 1;
-}
-
-header .main {
-    /*con poner el header se estÃ¡ aumentando la especificidad de la regla, lo que significa que tendrÃ¡ prioridad sobre otras reglas que puedan aplicarse a ".main" en la pÃ¡gina. */
-    position: absolute
-        /*Con absolute se quita del flujo normal, en otras palabras reaparece el h1 en la parte superior ya que no se le aplican las otras caracteristicas de posicion. */
-    ;
-    width: calc(100vw - 300px);
-    /*La funcion calc es una funcion que permite calcular en este caso permite que del 100% del ancho siempre se le reste 300px osea si la pantalla tiene 1000px el ancho sera de 700px*/
-    left: 300px;
-    background: $white;
-    min-height: 100vh;
-}
-
-header .main.active {
-    width: calc(100vw - 0px);
-    /*La funcion calc es una funcion que permite calcular en este caso permite que del 100% del ancho siempre se le reste 300px osea si la pantalla tiene 1000px el ancho sera de 700px*/
-    left: 0px;
-
-}
-
-header .main.active {
-    margin-left: 0px;
-
-}
-
-header .main .headerbar {
-    position: fixed;
-    top: 0;
-    width: calc(100vw - 300px);
-    left: 300px;
-    background: $white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: $sombra;
-    height: 60px;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10000
-        /*Para que desaparesca es como displey none */
-    ;
-    transition: width 0.5s, left 0.5s
-        /*Aqui dice todos los movimientos del width "ancho" se hacen en 5s e inicia por la izquierda de modo que incluso si moves la pagina es mas responsiovo :D*/
-        /*EL primero es para el logo y el segundo afecta al boton hamburguesa*/
-    ;
-
-}
-
-.main .headerbar.active {
-    width: calc(100vw - 0px);
-    left: 0px;
-
-}
-
-
-.main .headerbar .logo {
-    color: $black;
-    font-weight: 700
-        /*Grosor de la negrita 'letra'*/
-    ;
-    text-decoration: none;
-    font-size: 1.4em
-        /*En referencia al tamaÃ±o del elemnto padre */
-    ;
-    text-transform: uppercase
-        /*Trasforma el texto en mayusculas aunque es mas facil solo escribirla en mayusculas ;D*/
-    ;
-    letter-spacing: 1px
-        /*Aumenta el espacio entre las letras */
-    ;
-}
-
-.main .headerbar .logo {
-    position: relative;
-    width: calc(100vw - 300px);
-    height: 60px;
-    width: 250px;
-    cursor: pointer
-        /*El elemento ahora es interactivo*/
-    ;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-left: 0;
+            .logo {
+                position: relative;
+                width: calc(100vw - 300px);
+                height: 60px;
+                width: 250px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                padding-left: 0;
+                color: $black;
+                font-weight: 700;
+                text-decoration: none;
+                font-size: 1.4em;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
 }
 
 
@@ -173,7 +141,6 @@ header .main .headerbar {
 
 
 /*Inicia el Banner*/
-
 .banner {
     top: 100px;
     position: relative;
@@ -184,112 +151,91 @@ header .main .headerbar {
     padding: 0 20px;
     box-shadow: inset,
         inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-    transition: width 1s, left 0.5s
-}
+    transition: width 1s, left 0.5s;
 
-.banner.active {
-    left: 0;
-}
+    &.active {
+        left: 0;
+    }
 
-.banner img {
-    width: 300px;
-}
+    img {
+        width: 300px;
+    }
 
-.banner section {
-    min-height: 100vh;
-}
+    section {
+        min-height: 100vh;
+    }
 
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
 
-.banner .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+        .imgBx {
+            position: relative;
+            width: 200px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-bottom: 20px;
 
+            img {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
 
-}
+        h3 {
+            position: relative;
+            font-size: 1.4em;
+            color: $gris;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding-bottom: 5vh;
+        }
 
-.banner .imgBx {
-    position: relative;
-    width: 200px;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-bottom: 20px;
+        p {
+            color: $gris;
+            padding-bottom: 5vh;
+        }
 
+        .socialMedia {
+            position: absolute;
+            bottom: 0px;
+            display: flex;
+            list-style: none;
+            gap: 25px;
 
-}
+            li a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background: $black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                text-decoration: none;
+                border-radius: 50%;
+                color: $gris;
+                background: #EBEBEB;
+                box-shadow: $sombra;
 
-.banner .imgBx img {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+                &:hover {
+                    box-shadow: $sombrainterna;
+                }
+            }
 
-
-}
-
-.banner h3 {
-    position: relative;
-    font-size: 1.4em;
-    color: var(--gris);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding-bottom: 5vh;
-
-}
-
-.banner p {
-    color: var(--gris);
-    padding-bottom: 5vh;
-
-}
-
-
-.banner .socialMedia {
-    position: absolute;
-    bottom: 0px;
-    display: flex;
-
-}
-
-.banner .socialMedia {
-    list-style: none;
-    gap: 25px;
-
-
-}
-
-.banner .socialMedia li a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    text-decoration: none;
-    border-radius: 50%;
-    color: var(--gris);
-    background: #EBEBEB;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1),
-        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-
-.banner .socialMedia li a:hover {
-    box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1),
-        inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-
-.banner .socialMedia .fa {
-    color: rgb(80, 0, 78);
-
-
-
+            .fa {
+                color: rgb(80, 0, 78);
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 578px) {

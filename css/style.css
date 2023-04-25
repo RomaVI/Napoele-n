@@ -148,11 +148,9 @@ body {
   transition: width 0.5s;
   z-index: 100000;
 }
-
 .nav.active {
   width: 0;
 }
-
 .nav ul {
   /*La pos relative tiene la propiedad de que mantiene un flujo normal del documento lo que guarda su pocicion y mantiene la distancia entre el borde del elemento al borde de su contenedor en la direccion correspondientes*/
   position: relative;
@@ -161,21 +159,21 @@ body {
   width: 100%;
   padding: 20px 40px;
 }
-
 .nav ul li {
   /*Pongo position relative en todo para que se mantenga una jerarquia*/
   position: relative;
   width: 100%;
   list-style: none;
 }
-
 .nav ul li a {
   /*se puede utilizar "z-index" para controlar su elevaciÃ³n en relaciÃ³n con otros elementos. cuando se usa con postion relative*/
   position: relative;
   display: block;
   width: 100%;
   margin: 10px 0;
+  /*Izq y derecha */
   white-space: normal;
+  /*"white-space:normal;" es una propiedad CSS que define cÃ³mo se deben manejar los espacios en blanco, en el caso de normal significa que cualquier espacio en blanco adicional, como tabulaciones, espacios y saltos de lÃ­nea, se reducen a un solo espacio. AdemÃ¡s, el texto se ajusta automÃ¡ticamente al ancho del contenedor en el que se encuentra, lo que puede dar lugar a lÃ­neas de texto mÃ¡s largas o mÃ¡s cortas segÃºn la resoluciÃ³n de la pantalla o el tamaÃ±o del contenedor.*/
   display: flex;
   text-transform: uppercase;
   text-decoration: none;
@@ -184,32 +182,26 @@ body {
   letter-spacing: 2px;
   opacity: 0.5;
 }
-
 .nav ul li a:hover {
   /*Recordar sin el hover disminui su opacidad o trasparencia y aqui la aumento*/
   opacity: 1;
 }
 
 header .main {
-  /*con poner el header se estÃ¡ aumentando la especificidad de la regla, lo que significa que tendrÃ¡ prioridad sobre otras reglas que puedan aplicarse a ".main" en la pÃ¡gina. */
   position: absolute;
   width: calc(100vw - 300px);
-  /*La funcion calc es una funcion que permite calcular en este caso permite que del 100% del ancho siempre se le reste 300px osea si la pantalla tiene 1000px el ancho sera de 700px*/
   left: 300px;
   background: #EBEBEB;
   min-height: 100vh;
 }
-
 header .main.active {
   width: calc(100vw - 0px);
-  /*La funcion calc es una funcion que permite calcular en este caso permite que del 100% del ancho siempre se le reste 300px osea si la pantalla tiene 1000px el ancho sera de 700px*/
   left: 0px;
 }
-
-header .main.active {
-  margin-left: 0px;
+header .main.active .headerbar {
+  width: calc(100vw - 0px);
+  left: 0px;
 }
-
 header .main .headerbar {
   position: fixed;
   top: 0;
@@ -226,22 +218,11 @@ header .main .headerbar {
   z-index: 10000;
   transition: width 0.5s, left 0.5s;
 }
-
-.main .headerbar.active {
+header .main .headerbar.active {
   width: calc(100vw - 0px);
   left: 0px;
 }
-
-.main .headerbar .logo {
-  color: #333;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.4em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.main .headerbar .logo {
+header .main .headerbar .logo {
   position: relative;
   width: calc(100vw - 300px);
   height: 60px;
@@ -251,6 +232,12 @@ header .main .headerbar {
   justify-content: center;
   align-content: center;
   padding-left: 0;
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /*Inicia el Banner*/
@@ -265,19 +252,15 @@ header .main .headerbar {
   box-shadow: inset, inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
   transition: width 1s, left 0.5s;
 }
-
 .banner.active {
   left: 0;
 }
-
 .banner img {
   width: 300px;
 }
-
 .banner section {
   min-height: 100vh;
 }
-
 .banner .content {
   display: flex;
   flex-direction: column;
@@ -285,8 +268,7 @@ header .main .headerbar {
   justify-content: center;
   position: relative;
 }
-
-.banner .imgBx {
+.banner .content .imgBx {
   position: relative;
   width: 200px;
   height: 250px;
@@ -294,8 +276,7 @@ header .main .headerbar {
   border-radius: 50%;
   margin-bottom: 20px;
 }
-
-.banner .imgBx img {
+.banner .content .imgBx img {
   position: relative;
   top: 0;
   left: 0;
@@ -303,53 +284,44 @@ header .main .headerbar {
   height: 100%;
   object-fit: cover;
 }
-
-.banner h3 {
+.banner .content h3 {
   position: relative;
   font-size: 1.4em;
-  color: var(--gris);
+  color: #53657D;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding-bottom: 5vh;
 }
-
-.banner p {
-  color: var(--gris);
+.banner .content p {
+  color: #53657D;
   padding-bottom: 5vh;
 }
-
-.banner .socialMedia {
+.banner .content .socialMedia {
   position: absolute;
   bottom: 0px;
   display: flex;
-}
-
-.banner .socialMedia {
   list-style: none;
   gap: 25px;
 }
-
-.banner .socialMedia li a {
+.banner .content .socialMedia li a {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: var(--black);
+  background: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   text-decoration: none;
   border-radius: 50%;
-  color: var(--gris);
+  color: #53657D;
   background: #EBEBEB;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-
-.banner .socialMedia li a:hover {
+.banner .content .socialMedia li a:hover {
   box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-
-.banner .socialMedia .fa {
+.banner .content .socialMedia .fa {
   color: rgb(80, 0, 78);
 }
 
