@@ -1,0 +1,24 @@
+$black: #333;
+$white: #EBEBEB;
+$white2: #EBEBEB;
+$gris: #53657D;
+$sombra-ppal: #c9c9c9;
+$sombra-sec: #ffffff;
+$borde-negro: #00000050;
+$marcado: rgb(127, 195, 255);
+$sombrainterna: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+$sombra: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    padding: 0;
+    margin: 0;
+    background-color: $white2;
+    height: 100vh;
+}
+

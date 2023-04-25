@@ -1,0 +1,81 @@
+/* animacion del boton de descarga cv */
+
+.block-btn-cv {
+    background: $white;
+    z-index: 0;
+    
+
+}
+
+.block-btn-cv a {
+    background: $white;
+    box-shadow: $sombra;
+        z-index: 0;
+}
+
+.block-btn-cv a:hover {
+    background: $white;
+    box-shadow: $sombrainterna;
+        z-index: 0;
+}
+
+
+.block-cv {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 105px 0;
+    z-index: 0;
+}
+
+
+.block-cv a {
+    display: flex;
+    min-width: 225px;
+    padding: 25px 35px;
+    margin: 0 25px;
+    border-radius: 10px;
+    color: $gris;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 0;
+}
+
+/*Termina el boton de cv*/
+
+/*Boton Hamburguesa*/
+.headerbar .toggle button{
+    border: none;
+}
+.headerbar .toggle .header-hamburguesa-line {
+    background-color: $gris;
+    border: none;
+    border-radius: 3px;
+    height: 0.2rem;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    color: $gris;
+}
+
+.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+    position: relative;
+
+}
+
+.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(2) {
+    opacity: 0;
+    position: relative;
+
+}
+
+.headerbar .toggle .header-hamburguesa:hover .header-hamburguesa-line:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+    position: relative;
+
+
+}
+
+/*Termina animacion de hamburguesas*/
