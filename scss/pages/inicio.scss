@@ -206,7 +206,7 @@ header {
 
         .socialMedia {
             position: absolute;
-            bottom: 0px;
+            bottom: 10vh;
             display: flex;
             list-style: none;
             gap: 25px;
@@ -262,4 +262,5 @@ header {
     .banner .active {
         display: none;
     }
+    
 }

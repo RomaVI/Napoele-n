@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="proyectos de programacion, trabajos de mustra programacion web, trabajos full stack developer, animaciones.">
+    <link rel="preload" href="/img/R1.jpeg" as="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--El link de abajo es para un conjunto de iconos, es como los iconos de  boostrap pero no se si se pueden usar asi que no los uso -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Napoelóm</title>
+</head>
+
+<body>
+    <header class="header-container">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobremi.html">Sobre mi</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="headerbar">
+                <a href="" class="logo">
+                    <h1></h1>
+                </a>
+                <div class="toggle">
+                    <button class="header-hamburguesa">
+                        <span class="header-hamburguesa-line"></span>
+                        <span class="header-hamburguesa-line"></span>
+                        <span class="header-hamburguesa-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner" id="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/animaciondefondopagdepeliculas2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/animaciondefondopagdepeliculas2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/animaciondefondopagdepeliculas2.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            
+          </div>
+        <footer></footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script>
+            let headerbar = document.querySelector('.headerbar');
+            let nav = document.querySelector(' .nav');
+            let main = document.querySelector(' .main');
+            let banner = document.querySelector(' .banner');
+            let toggle = document.querySelector('.toggle');
+            toggle.onclick = function () {
+                toggle.classList.toggle('active');
+                headerbar.classList.toggle('active');
+                nav.classList.toggle('active');
+                main.classList.toggle('active');
+                banner.classList.toggle('active');
+            }
+        </script>
+</body>
+
+
+
+</html>
