@@ -400,17 +400,17 @@ header .main .headerbar .logo {
   margin-bottom: 2vh;
   padding-bottom: 55px;
   cursor: move;
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
 }
 .hero p {
   color: rgb(27, 55, 63);
 }
 .hero .images {
-  width: 60%;
-  height: 80%;
+  width: 120%;
+  height: 100%;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -35vw;
 }
 .hero .images img {
   height: 100%;
@@ -421,8 +421,10 @@ header .main .headerbar .logo {
   transition: bottom 1s, left 1s;
 }
 .hero .images .hero-texturas {
-  height: 100vh;
-  left: 30vw;
+  height: 140vh;
+  width: 40vw;
+  top: -10vh;
+  left: 45vw;
   position: relative;
 }
 .hero .images .hero-texturas:hover {
@@ -430,6 +432,7 @@ header .main .headerbar .logo {
 }
 .hero .images .hero-retrato {
   left: 50%;
+  width: 50%;
   transition: left 1s;
 }
 .hero .images .hero-retrato:hover {
@@ -485,9 +488,93 @@ header .main .headerbar .logo {
     justify-content: space-between;
   }
 }
-.carousel-item img {
+.carrousel {
+  margin-left: 0vw;
+  margin-top: -7vh;
   width: calc(100vw - 300px);
-  height: 80vh;
+}
+.carrousel img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+.carrousel h1 {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  color: #53657D;
+  padding-bottom: 3vh;
+  text-shadow: -1px -1px blue;
+}
+.carrousel h1:hover {
+  text-shadow: -1px -1px rgb(141, 51, 174);
+}
+.carrousel a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  display: inline;
+}
+.carrousel li {
+  list-style-type: none;
+}
+.carrousel form,
+.carrousel input,
+.carrousel textarea,
+.carrousel select,
+.carrousel button {
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+}
+.carrousel .grande {
+  width: 360vw;
+  gap: 10vw;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  transition: all 0.4s ease;
+  background-color: #EBEBEB;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  padding: 2em;
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+.carrousel .img {
+  width: 100vw;
+  min-height: 10vh;
+  max-height: 60vh;
+  color: #333;
+  transition: all 0.4s ease;
+  background-color: #EBEBEB;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.carrousel .puntos {
+  width: 100%;
+  margin: 1em 0 0;
+  padding: 0.4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.carrousel .puntos .punto {
+  width: 2em;
+  height: 2em;
+  margin: 1em 1em 0;
+  color: #333;
+  transition: all 0.4s ease;
+  background-color: #EBEBEB;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.carrousel .puntos .punto.activo {
+  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
 .contenedor-servicios .container-card {

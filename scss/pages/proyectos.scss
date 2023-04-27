@@ -1,4 +1,99 @@
-.carousel-item img{
+.carrousel {
+    margin-left: 0vw;
+    margin-top: -7vh;
     width: calc(100vw - 300px);
-    height: 80vh;
+
+    img {
+        max-width: 100%;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        display: flex;
+        justify-content: center;
+        color: $gris;
+        padding-bottom: 3vh;
+        text-shadow: -1px -1px blue;
+
+        &:hover {
+            text-shadow: -1px -1px rgb(141, 51, 174);
+        }
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+        display: inline;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    form,
+    input,
+    textarea,
+    select,
+    button {
+        hyphens: auto;
+        background-color: transparent;
+        display: block;
+    }
+
+    .grande {
+        width: 360vw;
+        gap: 10vw;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        color: $black;
+        transition: all 0.4s ease;
+        background-color: $white;
+        box-shadow: $sombra;
+        padding: 2em;
+        transition: all 0.5s ease;
+        transform: translateX(0%);
+    }
+
+    .img {
+        width: 100vw;
+        min-height: 10vh;
+        max-height: 60vh;
+        color: $black;
+        transition: all 0.4s ease;
+        background-color: $white;
+        box-shadow: $sombra;
+    }
+
+    .puntos {
+        width: 100%;
+        margin: 1em 0 0;
+        padding: 0.4em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .punto {
+            width: 2em;
+            height: 2em;
+            margin: 1em 1em 0;
+            color: $black;
+            transition: all 0.4s ease;
+            background-color: $white;
+            border-radius: 50%;
+            box-shadow: $sombra;
+
+            &.activo {
+                box-shadow: $sombrainterna;
+            }
+        }
+    }
 }

@@ -55,7 +55,7 @@
                 margin-bottom: 2vh;
                 padding-bottom: 55px;
                 cursor: move;
-                backdrop-filter: blur(1px);
+                backdrop-filter: blur(2px);
             }
         }
     }
@@ -65,11 +65,11 @@
     }
 
     .images {
-        width: 60%;
-        height: 80%;
+        width: 120%;
+        height: 100%;
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: -35vw;
 
         img {
             height: 100%;
@@ -81,8 +81,10 @@
         }
 
         .hero-texturas {
-            height: 100vh;
-            left: 30vw;
+            height: 140vh;
+            width: 40vw;
+            top: -10vh;
+            left: 45vw;
             position: relative;
 
             &:hover {
@@ -92,6 +94,7 @@
 
         .hero-retrato {
             left: 50%;
+            width: 50%;
             transition: left 1s;
 
             &:hover {
