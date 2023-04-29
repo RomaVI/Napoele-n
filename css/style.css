@@ -10,6 +10,7 @@ body {
   margin: 0;
   background-color: #EBEBEB;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 /*Animacion del Inicio o index*/
@@ -363,7 +364,6 @@ header .main .headerbar .logo {
   width: calc(100vw - 0px);
 }
 .hero .detel {
-  top: 100px;
   margin-left: 10%;
   display: flex;
   flex-direction: column;
@@ -371,36 +371,40 @@ header .main .headerbar .logo {
 }
 .hero .detel h1 {
   display: flex;
-  top: 10px;
-  padding-left: 20px;
+  padding-left: 1vw;
   font-size: 50px;
   color: #53657D;
   margin-bottom: 20px;
 }
 .hero .detel p {
-  color: #333;
+  color: #53657D;
   line-height: 22px;
 }
 .hero .detel span {
-  color: rgb(148, 13, 76);
+  color: none;
   margin-left: 20px;
+  font-weight: 200;
 }
 .hero .detel .hero-texto {
-  padding: 10px 18px;
-  max-width: 45vw;
+  padding: 8px 10px;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   margin: 0;
 }
 .hero .detel .hero-texto .hero-texto1 {
-  background-color: rgba(0, 0, 0, 0.537);
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 2vh;
-  padding-bottom: 55px;
+  max-width: 35vw;
+  background-color: #EBEBEB;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 0.5vh 2.5vw 0.5vh 2.5vw;
+  padding-bottom: 35px;
   cursor: move;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
+  margin-bottom: 3vh;
+}
+.hero .detel .hero-texto .hero-texto1:hover {
+  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 .hero p {
   color: rgb(27, 55, 63);
@@ -408,9 +412,14 @@ header .main .headerbar .logo {
 .hero .images {
   width: 120%;
   height: 100%;
+  max-width: 120%;
+  height: 100%;
   position: absolute;
   bottom: 0;
   right: -35vw;
+}
+.hero .images.active {
+  width: calc(100vw - 100px);
 }
 .hero .images img {
   height: 100%;
@@ -421,9 +430,9 @@ header .main .headerbar .logo {
   transition: bottom 1s, left 1s;
 }
 .hero .images .hero-texturas {
-  height: 140vh;
-  width: 40vw;
-  top: -10vh;
+  height: 100vh;
+  width: 35vw;
+  top: 10vh;
   left: 45vw;
   position: relative;
 }
@@ -432,7 +441,7 @@ header .main .headerbar .logo {
 }
 .hero .images .hero-retrato {
   left: 50%;
-  width: 50%;
+  width: 57%;
   transition: left 1s;
 }
 .hero .images .hero-retrato:hover {
@@ -492,6 +501,7 @@ header .main .headerbar .logo {
   margin-left: 0vw;
   margin-top: -7vh;
   width: calc(100vw - 300px);
+  height: 200vh;
 }
 .carrousel img {
   max-width: 100%;
@@ -586,7 +596,7 @@ header .main .headerbar .logo {
 .contenedor-servicios .container-card .card {
   width: 100%;
   margin: 20px;
-  border-radius: 10%;
+  border-radius: 15px;
   overflow: hidden;
   background: var(--white);
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Argentina cordoba, programador web, experiencia programacion, estudios de programacion  ">
+    <meta name="description"
+        content="Argentina cordoba, programador web, experiencia programacion, estudios de programacion  ">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
@@ -32,7 +33,7 @@
                     <h1></h1>
                 </a>
                 <div class="toggle">
-                    <button class="header-hamburguesa"title="button-hamburguesassss">
+                    <button class="header-hamburguesa" title="button-hamburguesassss">
                         <span class="header-hamburguesa-line"></span>
                         <span class="header-hamburguesa-line"></span>
                         <span class="header-hamburguesa-line"></span>
@@ -44,29 +45,36 @@
     <section class="banner" id="banner">
         <div class="hero">
             <div class="detel">
-                <h1>I,m Romano <span>Napoleon</span></h1>
+                <h1> <span>I,m </span> <span></span> Romano <span>Napoleon</span> </h1>
                 <div class="hero-texto">
                     <div>
-                        <p class="hero-texto1">
-                            <br><span></span> <span></span> En cuanto a mi, soy un aficionado a las animaciones y me gusta pasar mi tiempo programando o leyendo libros de fantacia. Actualmente soy un estudiante univercitario que estidia para conseguir la lisenciatura en ciencias de la computacionen en la univercidad nacional de cordoba. 
-                        </p>
-                        <p class="hero-texto1">
-                            <br><span></span> <span></span> Lenguajes de programacion 
-                            <span></span> <span></span><span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>javaescript Intermedio</span>
-                            <span>Haskell Univercitario</span>
-                            <span>C/C++ Univercitario</span>
-                            <span>Payton Basico</span>
-                        </p>
+                        <div class="hero-texto-div">
+                            <p class="hero-texto1">
+                                <br><span></span> <span></span> En cuanto a mi, soy un aficionado a las animaciones y me
+                                gusta pasar mi tiempo programando o leyendo libros de fantacia. Actualmente soy un
+                                estudiante univercitario que estidia para conseguir la lisenciatura en ciencias de la
+                                computacionen en la univercidad nacional de cordoba.
+                            </p>
+                            <div class="hero_dividir">
+
+                                <p class="hero-texto1">
+                                    Lenguajes de programacion: <br> <br> Haskell Univercitario , C/C++ Univercitario, HTML,CSS
+                                    Intermedio
+                                    
+                                </p>
+                            </div>
+
+                        </div>
                     </div>
                     <div>
                     </div>
                 </div>
             </div>
             <div class="images">
-                <img src="../img/textures-red-1.png" loading="lazy" alt="textura de pinceladas " class="hero-texturas">
+                <img src="../img/textura2.png" loading="lazy" alt="textura de pinceladas " class="hero-texturas">
                 <img src="../img/retrato.png" loading="lazy" alt="retrato" class="hero-retrato">
             </div>
-    
+
             <div class="social">
                 <a href="#"><i class="fab fa-dribbble"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -83,6 +91,7 @@
         let banner = document.querySelector(' .banner');
         let toggle = document.querySelector('.toggle');
         let hero = document.querySelector(' .hero');
+        let images = document.querySelector(' .images');
         toggle.onclick = function () {
             toggle.classList.toggle('active');
             headerbar.classList.toggle('active');
@@ -90,8 +99,9 @@
             main.classList.toggle('active');
             banner.classList.toggle('active');
             hero.classList.toggle('active');
+            images.classList.toggle('active');
         }
     </script>
-  
+
 
 </html>
