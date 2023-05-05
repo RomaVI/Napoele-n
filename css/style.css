@@ -13,6 +13,10 @@ body {
   overflow: hidden;
 }
 
+.servicios.active {
+  overflow-y: scroll;
+}
+
 /*Animacion del Inicio o index*/
 .headerbar .logo h1::after {
   content: "CODERBY";
@@ -692,6 +696,14 @@ header .main .headerbar .logo {
     margin: 15px;
   }
 }
+@media screen and (max-width: 568px) {
+  .contenedor-servicios {
+    display: none;
+  }
+  .contenedor-servicios.active {
+    display: block;
+  }
+}
 .content {
   width: calc(100vw - 300px);
   height: 100vh;
@@ -793,7 +805,19 @@ header .main .headerbar .logo {
 }
 @media screen and (max-width: 578px) {
   .content.active {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form {
+    height: auto;
+  }
+  .contact-form p {
+    margin: 10px 0;
+  }
+  .block {
+    display: block;
+    margin: 10px 0;
+    grid-column: auto;
   }
   .content {
     display: none;

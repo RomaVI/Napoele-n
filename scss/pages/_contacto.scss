@@ -14,7 +14,7 @@
     }
 
     .contact-wrapper {
-        box-shadow:$sombra;
+        box-shadow: $sombra;
 
         >* {
             padding: 1em;
@@ -81,7 +81,7 @@
     &.contact-info {
         background: $white;
         color: $gris;
-        box-shadow:$sombra;
+        box-shadow: $sombra;
 
         h4,
         ul,
@@ -121,10 +121,26 @@
 
 @media screen and (max-width: 578px) {
     .content.active {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form {
+        height: auto;
+    }
+
+    .contact-form p {
+        margin: 10px 0;
+    }
+
+    .block {
+        display: block;
+        margin: 10px 0;
+        grid-column: auto;
     }
 
     .content {
         display: none;
     }
+
 }

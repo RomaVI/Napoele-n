@@ -16,7 +16,7 @@
     <title>Napoelón | Almacenamiento de datos, argentina cordoba programacion, diseñador web, diseñador</title>
 </head>
 
-<body>
+<body class="servicios">
     <header class="header-container">
         <nav class="nav">
             <ul>
@@ -71,16 +71,15 @@
                 <figure>
                     <img src="../img/pagweb.png" loading="lazy" alt="diseñador mutiplataforma">
                 </figure>
-                <div class="contenido-card">
+                <footer class="contenido-card">
                     <h3>Desarrollo Web</h3>
                     <p>Creamos tu página web utilizando las últimas tecnologías disponibles. </p>
                     <a href="#">Leer Màs</a>
-                </div>
+                </footer>
             </div>
         </main>
     </section>
-    <contacto></contacto>
-    <footer></footer>
+
 
 
     <script>
@@ -89,12 +88,16 @@
         let main = document.querySelector(' .main');
         let banner = document.querySelector(' .banner');
         let toggle = document.querySelector('.toggle');
+        let servicios = document.querySelector('.servicios');
+        let contenedorservicios = document.querySelector(' .contenedor-servicios');
         toggle.onclick = function () {
             toggle.classList.toggle('active');
             headerbar.classList.toggle('active');
             nav.classList.toggle('active');
             main.classList.toggle('active');
             banner.classList.toggle('active');
+            servicios.classList.toggle('active');
+            contenedorservicios.classList.toggle('active');
         }
     </script>
 </body>

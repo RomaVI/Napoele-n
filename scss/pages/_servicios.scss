@@ -88,3 +88,11 @@
         margin: 15px;
     }
 }
+@media screen and (max-width:568px){
+    .contenedor-servicios{
+        display: none;
+    }
+    .contenedor-servicios.active {
+        display: block;
+    }
+}
