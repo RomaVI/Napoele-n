@@ -204,6 +204,10 @@ header {
             padding-bottom: 5vh;
         }
 
+        footer {
+            margin-left: -300px;
+        }
+
         .socialMedia {
             position: absolute;
             bottom: 10vh;
@@ -244,12 +248,39 @@ header {
         margin: 0;
         padding: 0;
         width: 100vw;
-        height: 100vh;
-        z-index: 2;
         align-items: center;
         font-size: 23px;
     }
-
+    .content.active{
+        display: block !important;
+    }
+    .content {
+        top: -7vh;
+        
+        justify-content: center;
+        
+        display: none !important;
+        & p {
+            width: 300px;
+            padding-left: 15vw;
+            top: 5vh;
+            }
+                
+    }
+    .content h3{
+        left: 5vw;
+    }
+    .content .imgBx{
+        left: 15vw;
+    }
+    .block-cv{
+        position: relative;
+        top: -35px;
+    }
+    .socialMedia{
+        top: 70vh;
+        left: 0vw;
+    }
     .headerbar {
         position: absolute;
         padding: 0;
@@ -259,8 +290,4 @@ header {
         margin-left: 0;
     }
 
-    .banner .active {
-        display: none;
-    }
-    
 }

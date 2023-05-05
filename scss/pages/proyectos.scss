@@ -3,6 +3,7 @@
     margin-top: -7vh;
     width: calc(100vw - 300px);
     height: 200vh;
+    border-radius: 10px;
 
     img {
         max-width: 100%;
@@ -13,16 +14,12 @@
     }
 
     h1 {
+        margin-top: 10px;
         font-size: 2.5rem;
         display: flex;
         justify-content: center;
         color: $gris;
         padding-bottom: 3vh;
-        text-shadow: -1px -1px blue;
-
-        &:hover {
-            text-shadow: -1px -1px rgb(141, 51, 174);
-        }
     }
 
     a {
@@ -48,7 +45,7 @@
     }
 
     .grande {
-        width: 360vw;
+        width: 300vw;
         gap: 10vw;
         display: flex;
         flex-flow: row nowrap;
@@ -61,7 +58,10 @@
         padding: 2em;
         transition: all 0.5s ease;
         transform: translateX(0%);
+        margin-left: 50px;
+       border-radius: 10px;
     }
+
 
     .img {
         width: 100vw;
@@ -81,6 +81,7 @@
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
+        z-index: 99999;
 
         .punto {
             width: 2em;
@@ -98,3 +99,6 @@
         }
     }
 }
+
+/**Proyecto dentro de un ptojecto**/
+

@@ -67,7 +67,7 @@
     p {
         color: rgb(27, 55, 63);
     }
-
+    
     .images {
         width: 120%;
         height: 100%;
@@ -76,8 +76,10 @@
         position: absolute;
         bottom: 0;
         right: -35vw;
+        transition: width 1s, left 0.5s;
         &.active {
             width: calc(100vw - 100px);
+            left: 300px;
         }
 
         img {

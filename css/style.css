@@ -10,7 +10,7 @@ body {
   margin: 0;
   background-color: #EBEBEB;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /*Animacion del Inicio o index*/
@@ -297,6 +297,9 @@ header .main .headerbar .logo {
   color: #53657D;
   padding-bottom: 5vh;
 }
+.banner .content footer {
+  margin-left: -300px;
+}
 .banner .content .socialMedia {
   position: absolute;
   bottom: 10vh;
@@ -331,10 +334,35 @@ header .main .headerbar .logo {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
-    z-index: 2;
     align-items: center;
     font-size: 23px;
+  }
+  .content.active {
+    display: block !important;
+  }
+  .content {
+    top: -7vh;
+    justify-content: center;
+    display: none !important;
+  }
+  .content p {
+    width: 300px;
+    padding-left: 15vw;
+    top: 5vh;
+  }
+  .content h3 {
+    left: 5vw;
+  }
+  .content .imgBx {
+    left: 15vw;
+  }
+  .block-cv {
+    position: relative;
+    top: -35px;
+  }
+  .socialMedia {
+    top: 70vh;
+    left: 0vw;
   }
   .headerbar {
     position: absolute;
@@ -343,9 +371,6 @@ header .main .headerbar .logo {
     left: 0px !important;
     width: 100vw !important;
     margin-left: 0;
-  }
-  .banner .active {
-    display: none;
   }
 }
 .nav {
@@ -417,9 +442,11 @@ header .main .headerbar .logo {
   position: absolute;
   bottom: 0;
   right: -35vw;
+  transition: width 1s, left 0.5s;
 }
 .hero .images.active {
   width: calc(100vw - 100px);
+  left: 300px;
 }
 .hero .images img {
   height: 100%;
@@ -502,6 +529,7 @@ header .main .headerbar .logo {
   margin-top: -7vh;
   width: calc(100vw - 300px);
   height: 200vh;
+  border-radius: 10px;
 }
 .carrousel img {
   max-width: 100%;
@@ -511,15 +539,12 @@ header .main .headerbar .logo {
   object-position: center center;
 }
 .carrousel h1 {
+  margin-top: 10px;
   font-size: 2.5rem;
   display: flex;
   justify-content: center;
   color: #53657D;
   padding-bottom: 3vh;
-  text-shadow: -1px -1px blue;
-}
-.carrousel h1:hover {
-  text-shadow: -1px -1px rgb(141, 51, 174);
 }
 .carrousel a {
   display: block;
@@ -541,7 +566,7 @@ header .main .headerbar .logo {
   display: block;
 }
 .carrousel .grande {
-  width: 360vw;
+  width: 300vw;
   gap: 10vw;
   display: flex;
   flex-flow: row nowrap;
@@ -554,6 +579,8 @@ header .main .headerbar .logo {
   padding: 2em;
   transition: all 0.5s ease;
   transform: translateX(0%);
+  margin-left: 50px;
+  border-radius: 10px;
 }
 .carrousel .img {
   width: 100vw;
@@ -572,6 +599,7 @@ header .main .headerbar .logo {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  z-index: 99999;
 }
 .carrousel .puntos .punto {
   width: 2em;
@@ -587,6 +615,7 @@ header .main .headerbar .logo {
   box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
+/**Proyecto dentro de un ptojecto**/
 .contenedor-servicios .container-card {
   width: 90%;
   display: flex;
@@ -635,13 +664,13 @@ header .main .headerbar .logo {
   margin-top: 10px;
   text-decoration: none;
   color: #53657D;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: all 400ms ease;
   margin-bottom: 5px;
 }
 .contenedor-servicios .container-card .card .contenido-card a:hover {
   background: transparent;
-  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
   color: #53657D;
 }
 .contenedor-servicios .title-cards {

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolios progamador web, Argentina cordoba programacion, portafloios full stack developer">
+    <meta name="description"
+        content="Portafolios progamador web, Argentina cordoba programacion, portafloios full stack developer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -54,20 +55,24 @@
                                     y a lo hora de hacer que se undo solo le comocas un insert al inicio de cada sombra-->
                 <a href="#">DOWNLOAD CV</a>
             </div>
-            <ul class="socialMedia">
-                <li><a href="#"><i aria-hidden="true" class="fa fa-google"></i> </a></li>
-                <span></span>
-                <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i> </a></li>
-                <span></span>
-                <li><a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i> </a></li>
-                <span></span>
-                <li><a href="#"><i aria-hidden="true" class="fa fa-github"></i> </a></li>
-            </ul>
+            <footer>
+                <ul class="socialMedia">
+                    <li><a href="https://mail.google.com" target="_blank"><i aria-hidden="true"
+                                class="fa fa-google"></i></a></li>
+                    <span></span>
+                    <li><a href="https://twitter.com" target="_blank"><i aria-hidden="true"
+                                class="fa fa-twitter"></i></a></li>
+                    <span></span>
+                    <li><a href="https://www.linkedin.com" target="_blank"><i aria-hidden="true"
+                                class="fa fa-linkedin"></i></a></li>
+                    <span></span>
+                    <li><a href="https://github.com/" target="_blank"><i aria-hidden="true"
+                                class="fa fa-github"></i></a></li>
+                </ul>
+
+            </footer>
         </main>
     </section>
-    <contacto></contacto>
-    <footer></footer>
-
 
     <script>
         let headerbar = document.querySelector('.headerbar');
@@ -75,12 +80,14 @@
         let main = document.querySelector(' .main');
         let banner = document.querySelector(' .banner');
         let toggle = document.querySelector('.toggle');
+        let content = document.querySelector(' .content');
         toggle.onclick = function () {
             toggle.classList.toggle('active');
             headerbar.classList.toggle('active');
             nav.classList.toggle('active');
             main.classList.toggle('active');
             banner.classList.toggle('active');
+            content.classList.toggle('active');
         }
     </script>
 </body>

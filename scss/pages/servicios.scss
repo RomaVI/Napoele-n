@@ -52,13 +52,14 @@
                     margin-top: 10px;
                     text-decoration: none;
                     color: $gris;
-                    border-radius: 4px;
+                    border-radius: 10px;
                     transition: all 400ms ease;
                     margin-bottom: 5px;
+                    
 
                     &:hover {
                         background: transparent;
-                        box-shadow: $sombrainterna;
+                        box-shadow: $sombra;
                         color: $gris;
                     }
                 }
