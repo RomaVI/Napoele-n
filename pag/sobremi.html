@@ -43,7 +43,7 @@
     <section class="banner" id="banner">
         <div class="hero">
             <div class="detel">
-                <h1> <span>I,m </span> <span></span> Romano <span>Napoleon</span> </h1>
+                <h1> <span>I,m </span> <span></span>  <strong>Romano</strong>  <span>Napoleon</span> </h1>
                 <div class="hero-texto">
                     <div>
                         <div class="hero-texto-div">
@@ -84,6 +84,7 @@
         let toggle = document.querySelector('.toggle');
         let hero = document.querySelector(' .hero');
         let images = document.querySelector(' .images');
+        let detel = document.querySelector(' .detel');
         toggle.onclick = function () {
             toggle.classList.toggle('active');
             headerbar.classList.toggle('active');
@@ -92,6 +93,7 @@
             banner.classList.toggle('active');
             hero.classList.toggle('active');
             images.classList.toggle('active');
+            detel.classList.toggle('active');
         }
     </script>
 

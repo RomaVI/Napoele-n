@@ -81,7 +81,7 @@
 @media only screen and (min-width:320px) and (max-width:768px) {
     .container-card {
         flex-wrap: wrap;
-        width: 70%;
+        width: 50%;
     }
 
     .card {
@@ -94,5 +94,8 @@
     }
     .contenedor-servicios.active {
         display: block;
+    }
+    .servicios.active{
+        overflow-y:scroll;
     }
 }
