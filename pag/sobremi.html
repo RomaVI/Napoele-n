@@ -14,7 +14,7 @@
 </head>
 
 
-<body>
+<body class="sobremi">
     <header class="header-container">
         <nav class="nav">
             <ul>
@@ -43,35 +43,26 @@
     <section class="banner" id="banner">
         <div class="hero">
             <div class="detel">
-                <h1> <span>I,m </span> <span></span>  <strong>Romano</strong>  <span>Napoleon</span> </h1>
+                <h1> <strong> I'm Romano</strong> <span>Napoleon</span> </h1>
                 <div class="hero-texto">
-                    <div>
-                        <div class="hero-texto-div">
-                            <p class="hero-texto1">
-                                <br><span></span> <span></span> En cuanto a mi, soy un aficionado a las animaciones y me
-                                gusta pasar mi tiempo programando o leyendo libros de fantacia. Actualmente soy un
-                                estudiante univercitario que estidia para conseguir la lisenciatura en ciencias de la
-                                computacionen en la univercidad nacional de cordoba.
-                            </p>
-                            <div class="hero_dividir">
-
-                                <p class="hero-texto1">
-                                    Lenguajes de programacion: <br> <br> Haskell Univercitario , C/C++ Univercitario, HTML,CSS
-                                    Intermedio
-                                    
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
+                    <div class="hero-texto-div">
+                        <p class="hero-texto1">
+                            <br><span></span> <span></span> En cuanto a mí, soy un aficionado a las animaciones y me
+                            gusta pasar mi tiempo programando o leyendo libros de fantasía. Actualmente soy un
+                            estudiante universitario que estudia para conseguir la licenciatura en Ciencias de la
+                            Computación en la Universidad Nacional de Córdoba.
+                        </p>
+                        <p class="hero-texto1 hero-texto2">
+                            Lenguajes de programación: <br> <br> Haskell universitario, C/C++ universitario, HTML/CSS
+                            intermedio
+                        </p>
                     </div>
                 </div>
             </div>
             <footer class="images">
-                <img src="../img/textura2.png" loading="lazy" alt="textura de pinceladas " class="hero-texturas">
+                <img src="../img/textura2.png" loading="lazy" alt="textura de pinceladas" class="hero-texturas">
                 <img src="../img/retrato.png" loading="lazy" alt="retrato" class="hero-retrato">
-            </footer>            
+            </footer>
         </div>
     </section>
 
@@ -85,6 +76,8 @@
         let hero = document.querySelector(' .hero');
         let images = document.querySelector(' .images');
         let detel = document.querySelector(' .detel');
+        let herotexto1 = document.querySelector(' .hero-texto1');
+        let herotexto2 = document.querySelector(' .hero-texto2');
         toggle.onclick = function () {
             toggle.classList.toggle('active');
             headerbar.classList.toggle('active');
@@ -94,6 +87,9 @@
             hero.classList.toggle('active');
             images.classList.toggle('active');
             detel.classList.toggle('active');
+            herotexto1.classList.toggle('active');
+            herotexto2.classList.toggle('active');
+
         }
     </script>
 

@@ -16,7 +16,7 @@
     align-items: center;
     overflow: hidden;
     transition: width 0.5s;
-    z-index: 100000;
+    z-index: 1000000000000;
 
     &.active {
         width: 0;
@@ -67,8 +67,9 @@ header {
         position: absolute;
         width: calc(100vw - 300px);
         left: 300px;
-        background: $white;
+        background: transparent;
         min-height: 100vh;
+        z-index: 99999999999999999999999;
 
         &.active {
             width: calc(100vw - 0px);
@@ -93,7 +94,7 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 10000;
+            z-index: 100000;
             transition: width 0.5s, left 0.5s;
 
             &.active {
@@ -142,6 +143,7 @@ header {
 
 /*Inicia el Banner*/
 .banner {
+
     top: 100px;
     position: relative;
     display: flex;
@@ -152,6 +154,7 @@ header {
     box-shadow: inset,
         inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
     transition: width 1s, left 0.5s;
+    z-index: 100000000;
 
     &.active {
         left: 0;
@@ -243,7 +246,12 @@ header {
 }
 
 @media screen and (max-width: 578px) {
-
+    .banner{
+        display: flex;
+    }
+    .banner.active{
+        display: block;
+    }
     .nav {
         margin: 0;
         padding: 0;
