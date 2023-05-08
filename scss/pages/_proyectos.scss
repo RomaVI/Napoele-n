@@ -1,34 +1,15 @@
 .carrousel {
-    margin-left: 0vw;
-    margin-top: -7vh;
-    width: calc(100vw - 300px);
-    height: 200vh;
-    border-radius: 10px;
-    z-index: 0;
-    img {
-        width: 100%;
-        min-height: 35vh;
-        display: block;
-        object-fit: cover;
-        object-position: center center;
-    }
+    width: 90%;
+    margin-top: -50px;
+    max-width: 120em;
+    padding: 2em;
+    color: $black;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+    background-color: $white;
+    overflow: hidden;
 
-    h1 {
-        margin-top: 10px;
-        font-size: 2.5rem;
-        display: flex;
-        justify-content: center;
-        color: $gris;
-        padding-bottom: 3vh;
-    }
 
-    a {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-        font-size: inherit;
-        display: inline;
-    }
 
     li {
         list-style-type: none;
@@ -45,46 +26,44 @@
     }
 
     .grande {
-        width: 300vw;
-        max-height:100vh ;
-        min-height: 50vh;
-        gap: 10vw;
+        margin-top: -25px;
+        width: 200%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
         color: $black;
         transition: all 0.4s ease;
+        border-radius: 1em;
         background-color: $white;
         box-shadow: $sombra;
         padding: 2em;
         transition: all 0.5s ease;
         transform: translateX(0%);
-        margin-left: 50px;
-       border-radius: 10px;
     }
 
-
     .img {
-        width: 100vw;
+        width: calc(100% / 2 - 2em);
         min-height: 10vh;
         max-height: 60vh;
         color: $black;
         transition: all 0.4s ease;
+        border-radius: 1em;
         background-color: $white;
-        box-shadow: $sombra;
+        box-shadow: $sombrainterna;
     }
-    &.activo{
-        margin-left: -600px;
-    }
+
+
+
     .puntos {
         position: absolute;
         width: 400px;
-        margin-top: 2vh;
-        margin-left: 40vw;
+        margin:1em 0 0;
         display: flex;
         flex-flow: row nowrap;
-        transform: translateX(-50%);
+        justify-content: center;
+        align-items: center;
+
         .punto {
             width: 45px;
             height: 45px;
@@ -106,3 +85,18 @@
 
 /**Proyecto dentro de un ptojecto**/
 
+@media screen and (max-width: 568px) {
+    .main {
+        overflow: hidden !important;
+    }
+
+    .carrousel {
+        display: none;
+    }
+
+    .carrousel.active {
+        display: block;
+    }
+
+
+}

@@ -183,3 +183,19 @@
     }
    
 }
+
+@media screen and (max-width: 568px) {
+    .detel{
+        margin-top: -50px;
+    }
+    .hero{
+        display: none;
+    }
+    .hero.active {
+        display: block;
+    }
+    .sobremi.active{
+        overflow-y:scroll;
+    }
+    
+}

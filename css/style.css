@@ -339,11 +339,11 @@ header .main .headerbar .logo {
     font-size: 23px;
   }
   .content.active {
-    display: block;
+    display: block !important;
+    top: -7vh;
   }
   .content {
-    top: -7vh;
-    display: none;
+    display: none !important;
   }
   .content p {
     width: 300px;
@@ -538,35 +538,30 @@ header .main .headerbar .logo {
     margin-right: 205px !important;
   }
 }
+@media screen and (max-width: 568px) {
+  .detel {
+    margin-top: -50px;
+  }
+  .hero {
+    display: none;
+  }
+  .hero.active {
+    display: block;
+  }
+  .sobremi.active {
+    overflow-y: scroll;
+  }
+}
 .carrousel {
-  margin-left: 0vw;
-  margin-top: -7vh;
-  width: calc(100vw - 300px);
-  height: 200vh;
-  border-radius: 10px;
-  z-index: 0;
-}
-.carrousel img {
-  width: 100%;
-  min-height: 35vh;
-  display: block;
-  object-fit: cover;
-  object-position: center center;
-}
-.carrousel h1 {
-  margin-top: 10px;
-  font-size: 2.5rem;
-  display: flex;
-  justify-content: center;
-  color: #53657D;
-  padding-bottom: 3vh;
-}
-.carrousel a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  font-size: inherit;
-  display: inline;
+  width: 90%;
+  margin-top: -50px;
+  max-width: 120em;
+  padding: 2em;
+  color: #333;
+  transition: all 0.4s ease;
+  border-radius: 1em;
+  background-color: #EBEBEB;
+  overflow: hidden;
 }
 .carrousel li {
   list-style-type: none;
@@ -581,44 +576,39 @@ header .main .headerbar .logo {
   display: block;
 }
 .carrousel .grande {
-  width: 300vw;
-  max-height: 100vh;
-  min-height: 50vh;
-  gap: 10vw;
+  margin-top: -25px;
+  width: 200%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   color: #333;
   transition: all 0.4s ease;
+  border-radius: 1em;
   background-color: #EBEBEB;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
   padding: 2em;
   transition: all 0.5s ease;
   transform: translateX(0%);
-  margin-left: 50px;
-  border-radius: 10px;
 }
 .carrousel .img {
-  width: 100vw;
+  width: calc(50% - 2em);
   min-height: 10vh;
   max-height: 60vh;
   color: #333;
   transition: all 0.4s ease;
+  border-radius: 1em;
   background-color: #EBEBEB;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-.carrousel.activo {
-  margin-left: -600px;
+  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 .carrousel .puntos {
   position: absolute;
   width: 400px;
-  margin-top: 2vh;
-  margin-left: 40vw;
+  margin: 1em 0 0;
   display: flex;
   flex-flow: row nowrap;
-  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
 }
 .carrousel .puntos .punto {
   width: 45px;
@@ -637,6 +627,17 @@ header .main .headerbar .logo {
 }
 
 /**Proyecto dentro de un ptojecto**/
+@media screen and (max-width: 568px) {
+  .main {
+    overflow: hidden !important;
+  }
+  .carrousel {
+    display: none;
+  }
+  .carrousel.active {
+    display: block;
+  }
+}
 .contenedor-servicios {
   margin-top: -100px;
 }

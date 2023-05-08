@@ -251,15 +251,13 @@ header {
         align-items: center;
         font-size: 23px;
     }
-
     .content.active {
-        display: block;
+        display: block !important;
+        top: -7vh;
     }
 
     .content {
-        top: -7vh;
-
-        display: none;
+        display: none !important;
 
         & p {
             width: 300px;
