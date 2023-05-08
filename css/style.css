@@ -147,7 +147,8 @@ body {
   align-items: center;
   overflow: hidden;
   transition: width 0.5s;
-  z-index: 1000000000000;
+  margin-top: -60px;
+  z-index: 100000;
 }
 .nav.active {
   width: 0;
@@ -192,9 +193,8 @@ header .main {
   position: absolute;
   width: calc(100vw - 300px);
   left: 300px;
-  background: transparent;
+  background: #EBEBEB;
   min-height: 100vh;
-  z-index: 100000000000000000000000;
 }
 header .main.active {
   width: calc(100vw - 0px);
@@ -212,7 +212,7 @@ header .main .headerbar {
   background: #EBEBEB;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  height: 60px;
+  height: 65px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -244,6 +244,7 @@ header .main .headerbar .logo {
 
 /*Inicia el Banner*/
 .banner {
+  margin-top: 65px;
   top: 100px;
   position: relative;
   display: flex;
@@ -253,7 +254,6 @@ header .main .headerbar .logo {
   padding: 0 20px;
   box-shadow: inset, inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
   transition: width 1s, left 0.5s;
-  z-index: 100000000;
 }
 .banner.active {
   left: 0;
@@ -268,7 +268,6 @@ header .main .headerbar .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
 }
 .banner .content .imgBx {
@@ -304,7 +303,7 @@ header .main .headerbar .logo {
 }
 .banner .content .socialMedia {
   position: absolute;
-  bottom: 10vh;
+  bottom: 20vh;
   display: flex;
   list-style: none;
   gap: 25px;
@@ -332,12 +331,6 @@ header .main .headerbar .logo {
 }
 
 @media screen and (max-width: 578px) {
-  .banner {
-    display: flex;
-  }
-  .banner.active {
-    display: block;
-  }
   .nav {
     margin: 0;
     padding: 0;
@@ -346,17 +339,19 @@ header .main .headerbar .logo {
     font-size: 23px;
   }
   .content.active {
-    display: block !important;
+    display: block;
   }
   .content {
     top: -7vh;
-    justify-content: center;
-    display: none !important;
+    display: none;
   }
   .content p {
     width: 300px;
     padding-left: 15vw;
     top: 5vh;
+  }
+  .content.active {
+    display: block;
   }
   .content h3 {
     left: 5vw;
@@ -372,13 +367,9 @@ header .main .headerbar .logo {
     top: 70vh;
     left: 0vw;
   }
-  .headerbar {
-    position: absolute;
-    padding: 0;
-    z-index: 10;
+  .main .headerbar {
     left: 0px !important;
     width: 100vw !important;
-    margin-left: 0;
   }
 }
 .nav {
@@ -446,7 +437,7 @@ header .main .headerbar .logo {
 }
 .hero .images {
   width: 120%;
-  height: 100%;
+  max-height: 100%;
   max-width: 120%;
   height: 100%;
   position: absolute;
@@ -471,20 +462,21 @@ header .main .headerbar .logo {
   width: 35vw;
   min-width: 300px;
   top: 10vh;
-  right: -45vw;
+  right: -50vw;
   margin-right: 10px;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 .hero .images .hero-texturas:hover {
   bottom: 80px;
 }
 .hero .images .hero-retrato {
   right: -55%;
-  width: 57%;
+  width: 55%;
   min-width: 600px;
+  max-height: 800px;
   transition: right 1s;
-  z-index: 3;
+  z-index: 13;
 }
 .hero .images .hero-retrato:hover {
   right: -50%;
@@ -552,6 +544,7 @@ header .main .headerbar .logo {
   width: calc(100vw - 300px);
   height: 200vh;
   border-radius: 10px;
+  z-index: 0;
 }
 .carrousel img {
   width: 100%;
@@ -636,12 +629,17 @@ header .main .headerbar .logo {
   background-color: #EBEBEB;
   border-radius: 50%;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  pointer-events: auto;
+  z-index: 9999999999999;
 }
 .carrousel .puntos .punto.activo {
   box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
 /**Proyecto dentro de un ptojecto**/
+.contenedor-servicios {
+  margin-top: -100px;
+}
 .contenedor-servicios .container-card {
   width: 90%;
   display: flex;
@@ -649,8 +647,8 @@ header .main .headerbar .logo {
   margin: auto;
 }
 .contenedor-servicios .container-card .card {
-  width: 100%;
-  margin: 20px;
+  width: 320px;
+  margin: 20px 20px;
   border-radius: 15px;
   overflow: hidden;
   background: var(--white);
@@ -663,7 +661,7 @@ header .main .headerbar .logo {
   transform: translateY(7%);
 }
 .contenedor-servicios .container-card .card img {
-  width: 100%;
+  width: 300px;
   height: 210px;
 }
 .contenedor-servicios .container-card .card .contenido-card {
@@ -713,6 +711,7 @@ header .main .headerbar .logo {
   .container-card {
     flex-wrap: wrap;
     width: 50%;
+    justify-content: center;
   }
   .card {
     margin: 15px;
@@ -814,7 +813,7 @@ header .main .headerbar .logo {
     grid-template-columns: 2fr 1fr;
   }
   .content {
-    margin-top: -100px;
+    margin-top: -50px;
   }
   .contact-wrapper > * {
     padding: 2em;
@@ -828,10 +827,13 @@ header .main .headerbar .logo {
     text-align: left;
   }
 }
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 700px) {
   .content.active {
     display: flex;
     flex-direction: column;
+  }
+  .content {
+    margin-top: -50px;
   }
   .contact-form {
     height: auto;

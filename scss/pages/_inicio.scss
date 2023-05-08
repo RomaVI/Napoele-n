@@ -16,7 +16,8 @@
     align-items: center;
     overflow: hidden;
     transition: width 0.5s;
-    z-index: 1000000000000;
+    margin-top: -60px;
+    z-index: 100000;
 
     &.active {
         width: 0;
@@ -67,9 +68,8 @@ header {
         position: absolute;
         width: calc(100vw - 300px);
         left: 300px;
-        background: transparent;
+        background: $white;
         min-height: 100vh;
-        z-index: 99999999999999999999999;
 
         &.active {
             width: calc(100vw - 0px);
@@ -89,7 +89,7 @@ header {
             background: $white;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: $sombra;
-            height: 60px;
+            height: 65px;
             padding: 0 40px;
             display: flex;
             justify-content: space-between;
@@ -143,7 +143,7 @@ header {
 
 /*Inicia el Banner*/
 .banner {
-
+    margin-top: 65px;
     top: 100px;
     position: relative;
     display: flex;
@@ -154,7 +154,6 @@ header {
     box-shadow: inset,
         inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
     transition: width 1s, left 0.5s;
-    z-index: 100000000;
 
     &.active {
         left: 0;
@@ -172,7 +171,6 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         position: relative;
 
         .imgBx {
@@ -213,7 +211,7 @@ header {
 
         .socialMedia {
             position: absolute;
-            bottom: 10vh;
+            bottom: 20vh;
             display: flex;
             list-style: none;
             gap: 25px;
@@ -246,12 +244,6 @@ header {
 }
 
 @media screen and (max-width: 578px) {
-    .banner{
-        display: flex;
-    }
-    .banner.active{
-        display: block;
-    }
     .nav {
         margin: 0;
         padding: 0;
@@ -259,43 +251,48 @@ header {
         align-items: center;
         font-size: 23px;
     }
-    .content.active{
-        display: block !important;
+
+    .content.active {
+        display: block;
     }
+
     .content {
         top: -7vh;
-        
-        justify-content: center;
-        
-        display: none !important;
+
+        display: none;
+
         & p {
             width: 300px;
             padding-left: 15vw;
             top: 5vh;
-            }
-                
+        }
     }
-    .content h3{
+
+    .content.active {
+        display: block;
+    }
+
+    .content h3 {
         left: 5vw;
     }
-    .content .imgBx{
+
+    .content .imgBx {
         left: 15vw;
     }
-    .block-cv{
+
+    .block-cv {
         position: relative;
         top: -35px;
     }
-    .socialMedia{
+
+    .socialMedia {
         top: 70vh;
         left: 0vw;
     }
-    .headerbar {
-        position: absolute;
-        padding: 0;
-        z-index: 10;
+
+    .main .headerbar {
         left: 0px !important;
         width: 100vw !important;
-        margin-left: 0;
     }
 
 }

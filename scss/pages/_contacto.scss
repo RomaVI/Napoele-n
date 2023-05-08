@@ -101,7 +101,7 @@
     }
 
     .content {
-        margin-top: -100px;
+        margin-top: -50px;
     }
 
     .contact-wrapper>* {
@@ -119,12 +119,14 @@
     }
 }
 
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 700px) {
     .content.active {
         display: flex;
         flex-direction: column;
     }
-
+    .content{
+        margin-top: -50px;
+    }
     .contact-form {
         height: auto;
     }
