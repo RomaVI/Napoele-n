@@ -7,13 +7,13 @@
 
 }
 
-.block-btn-cv a {
+.block-btn-cv button {
     background: $white;
     box-shadow: $sombra;
         z-index: 0;
 }
 
-.block-btn-cv a:hover {
+.block-btn-cv button:hover {
     background: $white;
     box-shadow: $sombrainterna;
         z-index: 0;
@@ -28,7 +28,7 @@
 }
 
 
-.block-cv a {
+.block-cv button {
     display: flex;
     min-width: 225px;
     padding: 25px 35px;
@@ -39,6 +39,7 @@
     justify-content: center;
     text-decoration: none;
     z-index: 0;
+    border: none;
 }
 
 /*Termina el boton de cv*/
@@ -77,5 +78,18 @@
 
 
 }
+.headerbar .toggle .header-hamburguesa {
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 22px;
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+    width: 30px;
+
+}
+
 
 /*Termina animacion de hamburguesas*/

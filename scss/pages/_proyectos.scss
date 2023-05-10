@@ -44,7 +44,7 @@
 
     .img {
         width: calc(100% / 2 - 2em);
-        min-height: 10vh;
+        min-height: 30vh;
         max-height: 60vh;
         color: $black;
         transition: all 0.4s ease;
@@ -63,6 +63,7 @@
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
+        margin-left: calc(50vw - 300px);
 
         .punto {
             width: 45px;
@@ -83,12 +84,8 @@
     }
 }
 
-/**Proyecto dentro de un ptojecto**/
 
 @media screen and (max-width: 568px) {
-    .main {
-        overflow: hidden !important;
-    }
 
     .carrousel {
         display: none;
@@ -97,6 +94,5 @@
     .carrousel.active {
         display: block;
     }
-
 
 }

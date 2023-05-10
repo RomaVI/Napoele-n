@@ -22,4 +22,11 @@ body {
     overflow: hidden;
 }
 
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: $gris;
+    border-radius: 10px;
 
+}

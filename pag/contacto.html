@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="contactar romano napoleon, contactar programador web, contacto diseñador web, preguntas de programacion,argentina cordoba">
+    <meta name="description"
+        content="contactar romano napoleon, contactar programador web, contacto diseñador web, preguntas de programacion,argentina cordoba">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--El link de abajo es para un conjunto de iconos, es como los iconos de  boostrap pero no se si se pueden usar asi que no los uso -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="../css/style.css">
     <title>contacto | Contacoto programador web</title>
 </head>
 
-<body>
+<body class="contacto">
     <header class="header-container">
         <nav class="nav">
             <ul>
@@ -27,12 +29,12 @@
             </ul>
         </nav>
         <div class="main">
-            <div class="headerbar">
+            <div class="headerbar" id="headerbar">
                 <a href="" class="logo">
                     <h1></h1>
                 </a>
                 <div class="toggle">
-                    <button class="header-hamburguesa"title="button-hamburguesassss">
+                    <button class="header-hamburguesa" title="button-hamburguesassss">
                         <span class="header-hamburguesa-line"></span>
                         <span class="header-hamburguesa-line"></span>
                         <span class="header-hamburguesa-line"></span>
@@ -42,14 +44,15 @@
         </div>
     </header>
     <section class="banner" id="banner">
-        <div class="content" id="content">
-            <div class="contact-wrapper  bounceInUp">
+        <div class="content">
+
+            <div class="contact-wrapper animated bounceInUp">
                 <div class="contact-form">
                     <h3>Contacto</h3>
                     <form action="">
                         <p>
-                            <label>Nombre Completo</label>
-                            <input type="text" name="nombre">
+                            <label>Nombre</label>
+                            <input type="text" name="fullname">
                         </p>
                         <p>
                             <label>Email</label>
@@ -57,38 +60,39 @@
                         </p>
                         <p>
                             <label>Numero de telefono</label>
-                            <input type="tel" name="telefono">
+                            <input type="tel" name="phone">
                         </p>
                         <p>
-                            <label>Hableme</label>
-                            <input type="text" name="informe">
+                            <label>Asunto</label>
+                            <input type="text" name="affair">
                         </p>
                         <p class="block">
                             <label>Mensaje</label>
-                            <textarea name="mensaje" rows="3"></textarea>
+                            <textarea name="message" rows="3"></textarea>
                         </p>
                         <p class="block">
-                            <button>
+                            <button id="btnEnviar">
                                 Enviar
                             </button>
                         </p>
                     </form>
                 </div>
                 <div class="contact-info">
-                    <h4>Mas informacion</h4>
+                    <h4>Mas Informacion</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Cordoba Argentina</li>
                         <li><i class="fas fa-phone"></i> (+54) 111 111 111</li>
-                        <li><i class="fas fa-envelope-open-text"></i> contact@roma.com</li>
+                        <li><i class="fas fa-envelope-open-text"></i> romano@gmail.com</li>
                     </ul>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam similique velit doloremque laudantium, nihil rerum ipsam eveniet ab esse ad nesciunt tenetur veniam inventore officiis mollitia molestiae animi minima dolorem. </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus
+                        repellendus?</p>
                     <p>roma.com</p>
                 </div>
             </div>
-    
         </div>
+    </div>
     </section>
-
+        <script src="../js/main.js"></script>
     <script>
         let headerbar = document.querySelector('.headerbar');
         let nav = document.querySelector(' .nav');
@@ -96,13 +100,15 @@
         let banner = document.querySelector(' .banner');
         let toggle = document.querySelector('.toggle');
         let content = document.querySelector('.content');
+        let contacto = document.querySelector(' .contacto');
         toggle.onclick = function () {
             toggle.classList.toggle('active');
             headerbar.classList.toggle('active');
             nav.classList.toggle('active');
             main.classList.toggle('active');
             banner.classList.toggle('active');
-            content.classList.toggle('active');s
+            content.classList.toggle('active'); 
+            contacto.classList.toggle('active');
         }
     </script>
 </body>

@@ -1,7 +1,8 @@
 .content {
     width: calc(100vw - 300px);
-    height: 100vh;
-
+    height: 60vh;
+    margin-top: -20px;
+    border-radius: 50px ;
     &.active {
         width: calc(100vw - 0px);
     }
@@ -27,7 +28,8 @@
 
         form {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            flex-direction: 1fr 1fr;
+        
 
             label {
                 display: block;
@@ -68,9 +70,8 @@
 
                 &:hover,
                 &:focus {
-                    background: #a00b0b;
-                    color: #fff;
-                    transition: background-color 50s linear;
+                    
+                    color: $gris;
                     outline: 0;
                     box-shadow: $sombrainterna;
                 }
@@ -91,25 +92,17 @@
         }
     }
 }
-
-
-/* LARGE SIZE */
-@media(min-width: 700px) {
+@media screen and (min-width: 700px) {
     .contact-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
-
     .content {
         margin-top: -50px;
+        display: grid;
     }
-
     .contact-wrapper>* {
-        padding: 2em;
-    }
-
-    .content {
-        display: none;
+        padding: 1em;
     }
 
     .contact-info h4,
@@ -118,31 +111,33 @@
         text-align: left;
     }
 }
-
-@media screen and (max-width: 700px) {
-    .content.active {
-        display: flex;
-        flex-direction: column;
+@media screen and (max-width: 700) {
+    .contacto.active{
+        overflow-y:scroll;
+    }
+}
+@media screen and (max-width: 568px) {
+    #banner .content .contact-wrapper .contact-form form {
+        display: flex   ;
+        flex-wrap: wrap ;
+    }
+    #banner .content .contact-wrapper .contact-form form p {
+        flex: 1 1 auto;
     }
     .content{
-        margin-top: -50px;
-    }
-    .contact-form {
-        height: auto;
-    }
-
-    .contact-form p {
-        margin: 10px 0;
-    }
-
-    .block {
-        display: block;
-        margin: 10px 0;
-        grid-column: auto;
-    }
-
-    .content {
         display: none;
+        border-radius: 50px;
+        
     }
-
+    .content.active {
+        display: grid;
+    }
+    .contacto.active{
+        overflow-y:scroll;
+    }
+    #btnEnviar{
+        margin-top: 10px;
+        width: 80vw;
+    }
 }
+

@@ -57,6 +57,7 @@
                 &:hover {
                     /*Recordar sin el hover disminui su opacidad o trasparencia y aqui la aumento*/
                     opacity: 1;
+                    color: $gris;
                 }
             }
         }
@@ -167,20 +168,20 @@ header {
         min-height: 100vh;
     }
 
-    .content {
+    .contentenedor {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: relative;
 
         .imgBx {
             position: relative;
-            width: 200px;
+            width: 250px;
             height: 250px;
             overflow: hidden;
             border-radius: 50%;
-            margin-bottom: 20px;
-
+            margin-bottom: 10px;
+            top: -70px;
             img {
                 position: relative;
                 top: 0;
@@ -202,16 +203,17 @@ header {
 
         p {
             color: $gris;
-            padding-bottom: 5vh;
+            padding-bottom: 2vh;
         }
 
         footer {
             margin-left: -300px;
+            padding-bottom: 5vh;
         }
 
         .socialMedia {
             position: absolute;
-            bottom: 20vh;
+            bottom: 5vh;
             display: flex;
             list-style: none;
             gap: 25px;
@@ -249,48 +251,39 @@ header {
         padding: 0;
         width: 100vw;
         align-items: center;
+        margin-top: -60px;
         font-size: 23px;
     }
-    .content.active {
-        display: block !important;
+    #banner .contentenedor.active {
+        display: flex ;
+        flex-direction: column ;
         top: -7vh;
     }
 
-    .content {
-        display: none !important;
+    .contentenedor {
+        display: none;
 
         & p {
             width: 300px;
-            padding-left: 15vw;
+            text-align: center;
             top: 5vh;
         }
     }
 
-    .content.active {
-        display: block;
-    }
-
-    .content h3 {
-        left: 5vw;
-    }
-
-    .content .imgBx {
-        left: 15vw;
-    }
-
     .block-cv {
         position: relative;
-        top: -35px;
+        top: -5px;
     }
 
-    .socialMedia {
-        top: 70vh;
-        left: 0vw;
-    }
+    
 
-    .main .headerbar {
-        left: 0px !important;
-        width: 100vw !important;
+    #headerbar {
+        left: 0px ;
+        width: 100vw ;
+    }
+    
+    .inicio.active{
+        overflow-y:scroll;
     }
 
 }
