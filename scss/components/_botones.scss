@@ -3,20 +3,22 @@
 .block-btn-cv {
     background: $white;
     z-index: 0;
-    
+
 
 }
 
 .block-btn-cv button {
     background: $white;
     box-shadow: $sombra;
-        z-index: 0;
+    z-index: 0;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .block-btn-cv button:hover {
     background: $white;
     box-shadow: $sombrainterna;
-        z-index: 0;
+    z-index: 0;
 }
 
 
@@ -45,9 +47,10 @@
 /*Termina el boton de cv*/
 
 /*Boton Hamburguesa*/
-.headerbar .toggle button{
+.headerbar .toggle button {
     border: none;
 }
+
 .headerbar .toggle .header-hamburguesa-line {
     background-color: $gris;
     border: none;
@@ -78,6 +81,7 @@
 
 
 }
+
 .headerbar .toggle .header-hamburguesa {
     background-color: transparent;
     cursor: pointer;

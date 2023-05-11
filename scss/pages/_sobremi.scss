@@ -27,18 +27,23 @@
             font-size: 50px;
             color: $gris;
             margin-bottom: 20px;
-
+            font-weight: 300px;
+            font-family: 'Source Serif Pro', serif;
+            font-style: italic;
         }
 
         p {
             color: $gris;
             line-height: 22px;
+            font-weight: 100px;
+            font-family: 'Source Serif Pro', serif;
+            font-style: italic;
         }
 
         span {
-            color: none;
             margin-left: 20px;
             font-weight: 200;
+            color: rgb(34, 208, 197);
         }
 
         .hero-texto {
@@ -77,7 +82,7 @@
         max-width: 120%;
         height: 100%;
         position: absolute;
-        bottom: 10;
+        bottom: 10px;
         right: -25vw;
         transition: width 1s, left 0.5s;
 
@@ -89,7 +94,7 @@
         img {
             min-height: 90%;
             position: absolute;
-            margin-right:50%;
+            margin-right: 50%;
             bottom: 0;
             transform: translateX(-50%);
             transition: bottom 1s, left 1s;
@@ -111,7 +116,7 @@
         }
 
         .hero-retrato {
-            right:  -55%;
+            right: -55%;
             width: 55%;
             min-width: 600px;
             max-height: 800px;
@@ -126,76 +131,97 @@
 }
 
 @media screen and (max-width: 1068px) {
-    .images{
-        display:none;
+    .images {
+        display: none;
     }
-    .images.active{
+
+    .images.active {
         display: flex;
         z-index: 10;
         margin-left: 5vw;
     }
-    .detel .hero-texto > div > .hero-texto-div > p.hero-texto1 {
+
+    .detel .hero-texto>div>.hero-texto-div>p.hero-texto1 {
         width: 55vw;
     }
 }
 
 @media screen and (max-width: 1068px) {
-    .images{
-        display:none;
+    .images {
+        display: none;
     }
-    #page-content .images.active{
+
+    #page-content .images.active {
         display: flex;
         z-index: 10;
         margin-left: 5vw;
     }
-    .hero-texto1{
+
+    .hero-texto1 {
         width: 55vw !important;
     }
 }
+
 @media screen and (max-width: 968px) {
     .images {
-        display: none !important;
+        .hero-retrato {
+            display: none;
+        }
+
+        .hero-texturas {
+            display: none;
+        }
     }
-    .page-content .detel .hero-texto > div > .hero-texto-div > p.hero-texto1 {
+
+    .page-content .detel .hero-texto>div>.hero-texto-div>p.hero-texto1 {
         margin-left: 1vw;
         width: 50vw;
     }
-    .page-content .detel h1{
+
+    .page-content .detel h1 {
         margin-left: 55px;
     }
-    .page-content .detel h1 span{
+
+    .page-content .detel h1 span {
         display: none;
     }
-    .hero-texto1.active {
+
+    #herotexto .hero-texto1.active {
         width: 70vw !important;
         margin-left: 5px !important;
     }
+
     .detel span {
         display: none;
     }
-    .hero-texto-div{
-        margin-right: 25px !important;
-    }
-}   
-@media screen and (max-width: 768px) {
-    .hero-texto-div{
-        margin-right: 205px !important;
-    }
-   
 }
 
+
 @media screen and (max-width: 568px) {
-    .detel{
+    #imagess {
+        background-image: url('/img/extra3.png');
+        background-size: 100vw;
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-left: -260px;
+        margin-bottom: -360px;
+    }
+
+    .detel {
         margin-top: -50px;
     }
-    .hero{
+
+    .hero {
         display: none;
     }
+
     .hero.active {
         display: block;
     }
-    .sobremi.active{
-        overflow-y:scroll;
+
+    .sobremi.active {
+        overflow-y: scroll;
+
     }
-    
+
 }

@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="contactar romano napoleon, contactar programador web, contacto diseñador web, preguntas de programacion,argentina cordoba">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,500;1,200;1,500&family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,11 +48,10 @@
     </header>
     <section class="banner" id="banner">
         <div class="content">
-
             <div class="contact-wrapper animated bounceInUp">
                 <div class="contact-form">
                     <h3>Contacto</h3>
-                    <form action="">
+                    <form id="contactForm">
                         <p>
                             <label>Nombre</label>
                             <input type="text" name="fullname">
@@ -78,21 +80,22 @@
                     </form>
                 </div>
                 <div class="contact-info">
-                    <h4>Mas Informacion</h4>
+                    <h4>Mas Informacion  </h4>
+                    <br>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Cordoba Argentina</li>
-                        <li><i class="fas fa-phone"></i> (+54) 111 111 111</li>
-                        <li><i class="fas fa-envelope-open-text"></i> romano@gmail.com</li>
+                        <li><i class="fa fa-blind" aria-hidden="true"></i> Cordoba Argentina</li>
+                        <li><i class="fa fa-bell-o" aria-hidden="true"></i> (+54) 111 111 111</li>
+                        <li><i class="fa fa-envelope-open-o" aria-hidden="true"></i> romano@gmail.com</li>
                     </ul>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus
-                        repellendus?</p>
+                    <p><br> Si necesitas aclarar alguna duda o quieres hacerme alguna sugerencia, estaré encantado de
+                        escucharte. Utiliza el formulario de contacto que aparece a continuación para ponerte en
+                        contacto conmigo. ¡Espero tu mensaje!</p>
                     <p>roma.com</p>
                 </div>
             </div>
         </div>
-    </div>
     </section>
-        <script src="../js/main.js"></script>
+    <script src="../js/main.js"></script>
     <script>
         let headerbar = document.querySelector('.headerbar');
         let nav = document.querySelector(' .nav');
@@ -107,12 +110,10 @@
             nav.classList.toggle('active');
             main.classList.toggle('active');
             banner.classList.toggle('active');
-            content.classList.toggle('active'); 
+            content.classList.toggle('active');
             contacto.classList.toggle('active');
         }
     </script>
 </body>
-
-
 
 </html>

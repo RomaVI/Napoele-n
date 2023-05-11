@@ -44,7 +44,7 @@
 
     .img {
         width: calc(100% / 2 - 2em);
-        min-height: 30vh;
+        min-height: 300px;
         max-height: 60vh;
         color: $black;
         transition: all 0.4s ease;
@@ -84,15 +84,31 @@
     }
 }
 
-
+@media screen and (max-width: 800px) {
+    .banner h2 {
+        position: absolute;
+        top: -13vh;
+        
+    }
+    
+}
 @media screen and (max-width: 568px) {
-
+    .banner h2 {
+        left: 3vw;
+        display: none;
+    }
+    .banner.active h2 {
+        display: block;
+    }
     .carrousel {
         display: none;
     }
 
     .carrousel.active {
         display: block;
+    }
+    .puntos{
+        left: 25vw;
     }
 
 }

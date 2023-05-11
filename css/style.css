@@ -53,19 +53,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*Termina la animacion del logo*/
-/*Animacion de la hamburguesa*/
-.headerbar .toggle .header-hamburguesa {
-  background-color: transparent;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 22px;
-  justify-content: space-between;
-  padding: 0;
-  position: relative;
-  width: 30px;
-}
-
 /* animacion del boton de descarga cv */
 .block-btn-cv {
   background: #EBEBEB;
@@ -76,6 +63,8 @@ body::-webkit-scrollbar-thumb {
   background: #EBEBEB;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
   z-index: 0;
+  font-weight: 600;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .block-btn-cv button:hover {
@@ -158,7 +147,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav {
-  position: fixed;
+  position: fixed !important;
   width: 300px;
   min-height: 100vh;
   height: 100vh;
@@ -199,12 +188,15 @@ body::-webkit-scrollbar-thumb {
   white-space: normal;
   /*"white-space:normal;" es una propiedad CSS que define cÃ³mo se deben manejar los espacios en blanco, en el caso de normal significa que cualquier espacio en blanco adicional, como tabulaciones, espacios y saltos de lÃ­nea, se reducen a un solo espacio. AdemÃ¡s, el texto se ajusta automÃ¡ticamente al ancho del contenedor en el que se encuentra, lo que puede dar lugar a lÃ­neas de texto mÃ¡s largas o mÃ¡s cortas segÃºn la resoluciÃ³n de la pantalla o el tamaÃ±o del contenedor.*/
   display: flex;
-  text-transform: uppercase;
   text-decoration: none;
   color: #333;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 2px;
   opacity: 0.5;
+  font-style: italic;
+  font-weight: 600;
+  font-family: "Cormorant Garamond", serif;
 }
 .nav ul li a:hover {
   /*Recordar sin el hover disminui su opacidad o trasparencia y aqui la aumento*/
@@ -275,7 +267,6 @@ header .main .headerbar .logo {
   align-items: center;
   left: 150px;
   padding: 0 20px;
-  box-shadow: inset, inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
   transition: width 1s, left 0.5s;
 }
 .banner.active {
@@ -299,8 +290,9 @@ header .main .headerbar .logo {
   height: 250px;
   overflow: hidden;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: -3vh;
   top: -70px;
+  box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7), 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 .banner .contentenedor .imgBx img {
   position: relative;
@@ -311,6 +303,7 @@ header .main .headerbar .logo {
   object-fit: cover;
 }
 .banner .contentenedor h3 {
+  font-family: "Cormorant Garamond", serif;
   position: relative;
   font-size: 1.4em;
   color: #53657D;
@@ -321,6 +314,9 @@ header .main .headerbar .logo {
 .banner .contentenedor p {
   color: #53657D;
   padding-bottom: 2vh;
+  font-family: "Source Serif Pro", serif;
+  font-weight: 500;
+  font-style: italic;
 }
 .banner .contentenedor footer {
   margin-left: -300px;
@@ -331,7 +327,7 @@ header .main .headerbar .logo {
   bottom: 5vh;
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 48px;
 }
 .banner .contentenedor .socialMedia li a {
   display: inline-block;
@@ -365,17 +361,21 @@ header .main .headerbar .logo {
     font-size: 23px;
   }
   #banner .contentenedor.active {
-    display: flex;
+    display: fixed;
     flex-direction: column;
     top: -7vh;
-  }
-  .contentenedor {
-    display: none;
   }
   .contentenedor p {
     width: 300px;
     text-align: center;
     top: 5vh;
+  }
+  #contentenedorid.active {
+    display: flex;
+  }
+  #contentenedorid {
+    margin-top: 23px;
+    display: none;
   }
   .block-cv {
     position: relative;
@@ -387,6 +387,9 @@ header .main .headerbar .logo {
   }
   .inicio.active {
     overflow-y: scroll;
+  }
+  #socialMediaid {
+    bottom: 65px;
   }
 }
 .nav {
@@ -417,15 +420,21 @@ header .main .headerbar .logo {
   font-size: 50px;
   color: #53657D;
   margin-bottom: 20px;
+  font-weight: 300px;
+  font-family: "Source Serif Pro", serif;
+  font-style: italic;
 }
 .hero .detel p {
   color: #53657D;
   line-height: 22px;
+  font-weight: 100px;
+  font-family: "Source Serif Pro", serif;
+  font-style: italic;
 }
 .hero .detel span {
-  color: none;
   margin-left: 20px;
   font-weight: 200;
+  color: rgb(34, 208, 197);
 }
 .hero .detel .hero-texto {
   padding: 8px 10px;
@@ -458,7 +467,7 @@ header .main .headerbar .logo {
   max-width: 120%;
   height: 100%;
   position: absolute;
-  bottom: 10;
+  bottom: 10px;
   right: -25vw;
   transition: width 1s, left 0.5s;
 }
@@ -526,8 +535,11 @@ header .main .headerbar .logo {
   }
 }
 @media screen and (max-width: 968px) {
-  .images {
-    display: none !important;
+  .images .hero-retrato {
+    display: none;
+  }
+  .images .hero-texturas {
+    display: none;
   }
   .page-content .detel .hero-texto > div > .hero-texto-div > p.hero-texto1 {
     margin-left: 1vw;
@@ -539,23 +551,23 @@ header .main .headerbar .logo {
   .page-content .detel h1 span {
     display: none;
   }
-  .hero-texto1.active {
+  #herotexto .hero-texto1.active {
     width: 70vw !important;
     margin-left: 5px !important;
   }
   .detel span {
     display: none;
   }
-  .hero-texto-div {
-    margin-right: 25px !important;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero-texto-div {
-    margin-right: 205px !important;
-  }
 }
 @media screen and (max-width: 568px) {
+  #imagess {
+    background-image: url("/img/extra3.png");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: -260px;
+    margin-bottom: -360px;
+  }
   .detel {
     margin-top: -50px;
   }
@@ -610,7 +622,7 @@ header .main .headerbar .logo {
 }
 .carrousel .img {
   width: calc(50% - 2em);
-  min-height: 30vh;
+  min-height: 300px;
   max-height: 60vh;
   color: #333;
   transition: all 0.4s ease;
@@ -644,12 +656,28 @@ header .main .headerbar .logo {
   box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
+@media screen and (max-width: 800px) {
+  .banner h2 {
+    position: absolute;
+    top: -13vh;
+  }
+}
 @media screen and (max-width: 568px) {
+  .banner h2 {
+    left: 3vw;
+    display: none;
+  }
+  .banner.active h2 {
+    display: block;
+  }
   .carrousel {
     display: none;
   }
   .carrousel.active {
     display: block;
+  }
+  .puntos {
+    left: 25vw;
   }
 }
 .contenedor-servicios {
@@ -686,16 +714,17 @@ header .main .headerbar .logo {
 .contenedor-servicios .container-card .card .contenido-card h3 {
   margin-bottom: 15px;
   color: #53657D;
-}
-.contenedor-servicios .container-card .card .contenido-card span {
-  color: red;
-  font-size: 20px;
+  font-family: "Cormorant Garamond", serif;
 }
 .contenedor-servicios .container-card .card .contenido-card p {
   line-height: 1.8;
   color: #53657D;
   font-size: 14px;
   margin-bottom: 5px;
+  font-style: italic;
+  font-family: "Cormorant Garamond", serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Source Serif Pro", serif;
 }
 .contenedor-servicios .container-card .card .contenido-card a {
   display: inline-block;
@@ -706,6 +735,8 @@ header .main .headerbar .logo {
   border-radius: 10px;
   transition: all 400ms ease;
   margin-bottom: 5px;
+  font-weight: 500px;
+  font-family: "Source Serif Pro", serif;
 }
 .contenedor-servicios .container-card .card .contenido-card a:hover {
   background: transparent;
@@ -720,9 +751,11 @@ header .main .headerbar .logo {
   margin-top: 20px;
   text-align: center;
   color: #7a7a7a;
+  font-style: italic;
+  font-family: "Source Serif Pro", serif;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .container-card {
     flex-wrap: wrap;
     width: 50%;
@@ -730,6 +763,10 @@ header .main .headerbar .logo {
   }
   .card {
     margin: 15px;
+  }
+  h2 {
+    position: absolute;
+    margin-left: 25vw;
   }
 }
 @media screen and (max-width: 568px) {
@@ -765,10 +802,12 @@ header .main .headerbar .logo {
 .content .contact-form {
   background: #EBEBEB;
   color: #53657D;
+  font-style: italic;
+  font-family: "Source Serif Pro", serif;
 }
 .content .contact-form form {
   display: grid;
-  flex-direction: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 .content .contact-form form label {
   display: block;
@@ -789,8 +828,7 @@ header .main .headerbar .logo {
   background: none;
   outline: 0;
   color: #53657D;
-  border-bottom: 1px solid #2a0476;
-  box-shadow: 2px 2px --gris;
+  box-shadow: 0px 2px 0px #53657D;
 }
 .content .contact-form form button:focus,
 .content .contact-form form input:focus,
@@ -819,6 +857,9 @@ header .main .headerbar .logo {
 .content.contact-info p {
   text-align: center;
   margin: 0 0 1rem 0;
+  font-family: "Cormorant Garamond", serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Source Serif Pro", serif;
 }
 
 @media screen and (min-width: 700px) {

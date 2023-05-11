@@ -75,3 +75,19 @@ $(document).ready(function () {
         });
     });
 });
+
+$(document).ready(function () {
+    $('#btnDescargar').on('click', function (e) {
+        e.preventDefault(); // Evita que se envíe el formulario de manera predeterminada
+
+        // Crea un enlace temporal que apunte al archivo que deseas descargar
+        var enlaceTemporal = document.createElement('a');
+        enlaceTemporal.href = '../cv.txt'; // 
+        enlaceTemporal.download = 'cv.txt'; // 
+
+        // Agrega el enlace temporal al documento y haz clic en él para iniciar la descarga
+        document.body.appendChild(enlaceTemporal);
+        enlaceTemporal.click();
+        document.body.removeChild(enlaceTemporal);
+    });
+});

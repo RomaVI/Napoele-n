@@ -5,11 +5,11 @@
 }
 
 .nav {
-    position: fixed;
+    position: fixed !important;
     width: 300px;
     min-height: 100vh;
     height: 100vh;
-    box-shadow: $sombrainterna;
+    box-shadow: $sombrainterna, ;
     background: $white2;
     display: flex;
     justify-content: center;
@@ -47,12 +47,20 @@
                 white-space: normal;
                 /*"white-space:normal;" es una propiedad CSS que define cÃ³mo se deben manejar los espacios en blanco, en el caso de normal significa que cualquier espacio en blanco adicional, como tabulaciones, espacios y saltos de lÃ­nea, se reducen a un solo espacio. AdemÃ¡s, el texto se ajusta automÃ¡ticamente al ancho del contenedor en el que se encuentra, lo que puede dar lugar a lÃ­neas de texto mÃ¡s largas o mÃ¡s cortas segÃºn la resoluciÃ³n de la pantalla o el tamaÃ±o del contenedor.*/
                 display: flex;
-                text-transform: uppercase;
+                
                 text-decoration: none;
                 color: $black;
+                font-size: 20px;
                 font-weight: 500;
                 letter-spacing: 2px;
                 opacity: 0.5;
+                font-style: italic;
+                font-weight: 600;
+
+                font-family: 'Cormorant Garamond', serif;
+                
+               
+
 
                 &:hover {
                     /*Recordar sin el hover disminui su opacidad o trasparencia y aqui la aumento*/
@@ -152,8 +160,6 @@ header {
     align-items: center;
     left: 150px;
     padding: 0 20px;
-    box-shadow: inset,
-        inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
     transition: width 1s, left 0.5s;
 
     &.active {
@@ -180,8 +186,10 @@ header {
             height: 250px;
             overflow: hidden;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin-bottom: -3vh;
             top: -70px;
+            box-shadow: $sombrainterna, $sombra;
+
             img {
                 position: relative;
                 top: 0;
@@ -193,6 +201,7 @@ header {
         }
 
         h3 {
+            font-family: 'Cormorant Garamond', serif;
             position: relative;
             font-size: 1.4em;
             color: $gris;
@@ -204,6 +213,9 @@ header {
         p {
             color: $gris;
             padding-bottom: 2vh;
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 500;
+            font-style: italic;
         }
 
         footer {
@@ -216,7 +228,7 @@ header {
             bottom: 5vh;
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 48px;
 
             li a {
                 display: inline-block;
@@ -232,6 +244,7 @@ header {
                 color: $gris;
                 background: #EBEBEB;
                 box-shadow: $sombra;
+
 
                 &:hover {
                     box-shadow: $sombrainterna;
@@ -255,19 +268,24 @@ header {
         font-size: 23px;
     }
     #banner .contentenedor.active {
-        display: flex ;
-        flex-direction: column ;
+        display: fixed;
+        flex-direction: column;
         top: -7vh;
     }
 
     .contentenedor {
-        display: none;
-
         & p {
             width: 300px;
             text-align: center;
             top: 5vh;
         }
+    }
+    #contentenedorid.active{
+        display: flex ;
+    }
+    #contentenedorid{
+        margin-top: 23px;
+        display: none;
     }
 
     .block-cv {
@@ -275,15 +293,17 @@ header {
         top: -5px;
     }
 
-    
+
 
     #headerbar {
-        left: 0px ;
-        width: 100vw ;
-    }
-    
-    .inicio.active{
-        overflow-y:scroll;
+        left: 0px;
+        width: 100vw;
     }
 
+    .inicio.active {
+        overflow-y: scroll;
+    }
+    #socialMediaid{
+        bottom: 65px;
+    }
 }

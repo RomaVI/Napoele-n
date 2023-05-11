@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Portafolios progamador web, Argentina cordoba programacion, portafloios full stack developer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,500;1,200;1,500&family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,7 +25,7 @@
     <header class="header-container">
         <nav class="nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" >Inicio</a></li>
                 <li><a href="./pag/sobremi.html">Sobre mi</a></li>
                 <li><a href="./pag/proyectos.html">Proyectos</a></li>
                 <li><a href="./pag/servicios.html">Servicios</a></li>
@@ -42,10 +47,10 @@
             </div>
         </div>
     </header>
-    <section class="banner" id="banner">
-        <main class="contentenedor">
+    <div class="banner" id="banner">
+        <main class="contentenedor" id="contentenedorid">
             <div class="imgBx">
-                <img src="./img/retrato4.png" alt="Retrato">
+                <img src="./img/retrato6.png" alt="Retrato">
             </div>
             <h3>Romano Napoleon</h3>
             <p>Soy Napoleon y este es mi oficial portafolio web</p>
@@ -53,26 +58,23 @@
                 <!--La verdad el tipo de boton mas facil de crear al color se le agregbackground: #F283A5;
                             box-shadow: 6px 6px 20px -1px 'color a eleccion', -6px -6px 20px -1px 'color a eleccion'; 
                                     y a lo hora de hacer que se undo solo le comocas un insert al inicio de cada sombra-->
-                <button id="btnDescargar" >DOWNLOAD CV</button>
+                <button id="btnDescargar">DOWNLOAD CV</button>
             </div>
             <footer>
-                <ul class="socialMedia">
+                <ul class="socialMedia" id="socialMediaid">
                     <li><a href="https://mail.google.com" target="_blank"><i aria-hidden="true"
                                 class="fa fa-google"></i></a></li>
-                    <span></span>
                     <li><a href="https://twitter.com" target="_blank"><i aria-hidden="true"
                                 class="fa fa-twitter"></i></a></li>
-                    <span></span>
                     <li><a href="https://www.linkedin.com" target="_blank"><i aria-hidden="true"
                                 class="fa fa-linkedin"></i></a></li>
-                    <span></span>
                     <li><a href="https://github.com/" target="_blank"><i aria-hidden="true"
                                 class="fa fa-github"></i></a></li>
                 </ul>
 
             </footer>
         </main>
-    </section>
+    </div>
 
     <script>
         let headerbar = document.querySelector('.headerbar');
