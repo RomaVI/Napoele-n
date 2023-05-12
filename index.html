@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,23 +8,31 @@
     <meta name="description"
         content="Soy un programador web full stack en Córdoba, Argentina, especializado en HTML, CSS, JavaScript, React y Node.js. En mi portafolio encontrarás proyectos de desarrollo web, así como habilidades en Git y GitHub. ¡Contáctame para discutir cómo puedo ayudarte con tu próximo proyecto!">
     <meta name="author" content="romano napoleon" />
-    <link rel="icon" href="./img/retrato6.ico">
+    <link rel="icon" href="./img/retrato6.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,500;1,200;1,500&family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--El link de abajo es para un conjunto de iconos, es como los iconos de  boostrap pero no se si se pueden usar asi que no los uso -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Napoelóm | Portafolios programador web </title>
 </head>
+<!-- IMPORTANTE -->
+<!-- He diseñado mi código para incluir un segundo body dentro del banner. 
+    todo el contenido se encuentra dentro de este banner, excepto la parte del nav y el header,
+    lo que significa que no se puede utilizar el footer fuera del banner.
+    También he tenido dudas sobre si debería incluir la carpeta scss en el archivo gitignore,
+    ya que esto podría impedir que alguien pueda ver si he implementado correctamente el código scss y
+    debo recalcar que la etiqueta <h1> esta vacía ya que tiene una animación que cambia de CODERBY a NAPOLEON
+    por lo que a la hora de visualizarla tiene contenido pero es agregado a partir del css .-->
+<!-- IMPORTANTE -->
 
 <body class="inicio">
     <header class="header-container">
         <nav class="nav">
-            <ul>
+            <ul id="ul">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="./pag/sobremi.html">Sobre mi</a></li>
                 <li><a href="./pag/proyectos.html">Proyectos</a></li>
@@ -34,7 +42,7 @@
         </nav>
         <div class="main">
             <div class="headerbar" id="headerbar">
-                <a href="" class="logo">
+                <a href="index.html" class="logo">
                     <h1></h1>
                 </a>
                 <div class="toggle">
@@ -48,16 +56,13 @@
         </div>
     </header>
     <div class="banner" id="banner">
-        <main class="contentenedor" id="contentenedorid">
-            <div class="imgBx">
-                <img src="./img/retrato6.png" alt="Retrato">
-            </div>
+        <div class="contentenedor" id="contentenedorid">
+            <main class="imgBx">
+                <img src="./img/retrato6.png" alt="Retrato echo por leonardo.ai de romano napoleon">
+            </main>
             <h3>Romano Napoleon</h3>
-            <p>Soy Napoleon y este es mi oficial portafolio web</p>
+            <p>Soy Napoleon y este es mi portafolio web oficial </p>
             <div class="block-cv block-btn-cv">
-                <!--La verdad el tipo de boton mas facil de crear al color se le agregbackground: #F283A5;
-                            box-shadow: 6px 6px 20px -1px 'color a eleccion', -6px -6px 20px -1px 'color a eleccion'; 
-                                    y a lo hora de hacer que se undo solo le comocas un insert al inicio de cada sombra-->
                 <button id="btnDescargar">DOWNLOAD CV</button>
             </div>
             <footer>
@@ -73,9 +78,8 @@
                 </ul>
 
             </footer>
-        </main>
+        </div>
     </div>
-
     <script>
         let headerbar = document.querySelector('.headerbar');
         let nav = document.querySelector(' .nav');

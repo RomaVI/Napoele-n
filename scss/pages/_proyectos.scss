@@ -1,3 +1,5 @@
+
+
 .carrousel {
     width: 90%;
     margin-top: -50px;
@@ -8,6 +10,7 @@
     border-radius: 1em;
     background-color: $white;
     overflow: hidden;
+    margin-left: -8%;
 
 
 
@@ -44,7 +47,8 @@
 
     .img {
         width: calc(100% / 2 - 2em);
-        min-height: 300px;
+        min-width: 50vw;
+        min-height: 30vh;
         max-height: 60vh;
         color: $black;
         transition: all 0.4s ease;
@@ -53,12 +57,16 @@
         box-shadow: $sombrainterna;
     }
 
+    .imgmovil {
+        display: none;
+    }
+
 
 
     .puntos {
         position: absolute;
         width: 400px;
-        margin:1em 0 0;
+        margin: 1em 0 0;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
@@ -84,31 +92,54 @@
     }
 }
 
+
+@media screen and (min-width: 801px) {
+    .titulocarrusel {
+        color: transparent;
+    }
+
+}
+
 @media screen and (max-width: 800px) {
     .banner h2 {
         position: absolute;
         top: -13vh;
-        
+
     }
-    
+
 }
+
 @media screen and (max-width: 568px) {
     .banner h2 {
         left: 3vw;
         display: none;
     }
+
     .banner.active h2 {
         display: block;
     }
+
     .carrousel {
         display: none;
+
     }
 
     .carrousel.active {
         display: block;
     }
-    .puntos{
+
+    .puntos {
         left: 25vw;
     }
+
+    .imgcompleta {
+        display: none;
+    }
+
+    #imgmovill {
+        display: flex;
+        min-height: 45vh;
+    }
+
 
 }

@@ -27,7 +27,6 @@
             font-size: 50px;
             color: $gris;
             margin-bottom: 20px;
-            font-weight: 300px;
             font-family: 'Source Serif Pro', serif;
             font-style: italic;
         }
@@ -35,7 +34,6 @@
         p {
             color: $gris;
             line-height: 22px;
-            font-weight: 100px;
             font-family: 'Source Serif Pro', serif;
             font-style: italic;
         }
@@ -157,12 +155,15 @@
         margin-left: 5vw;
     }
 
-    .hero-texto1 {
-        width: 55vw !important;
+    #herotexto .hero-texto1 {
+        width: 55vw;
     }
 }
 
 @media screen and (max-width: 968px) {
+    .hero{
+        top: -45px;
+    }
     .images {
         .hero-retrato {
             display: none;
@@ -187,8 +188,8 @@
     }
 
     #herotexto .hero-texto1.active {
-        width: 70vw !important;
-        margin-left: 5px !important;
+        width: 70vw ;
+        margin-left: 5px ;
     }
 
     .detel span {
@@ -223,5 +224,6 @@
         overflow-y: scroll;
 
     }
+    
 
 }

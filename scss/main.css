@@ -147,7 +147,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav {
-  position: fixed;
+  position: fixed !important;
   width: 300px;
   min-height: 100vh;
   height: 100vh;
@@ -197,7 +197,6 @@ body::-webkit-scrollbar-thumb {
   font-style: italic;
   font-weight: 600;
   font-family: "Cormorant Garamond", serif;
-  font-size: 24px;
 }
 .nav ul li a:hover {
   /*Recordar sin el hover disminui su opacidad o trasparencia y aqui la aumento*/
@@ -287,8 +286,8 @@ header .main .headerbar .logo {
 }
 .banner .contentenedor .imgBx {
   position: relative;
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
   overflow: hidden;
   border-radius: 50%;
   margin-bottom: -3vh;
@@ -301,11 +300,11 @@ header .main .headerbar .logo {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .banner .contentenedor h3 {
   font-family: "Cormorant Garamond", serif;
-  font-style: italic;
   position: relative;
   font-size: 1.4em;
   color: #53657D;
@@ -362,12 +361,6 @@ header .main .headerbar .logo {
     margin-top: -60px;
     font-size: 23px;
   }
-  .nav #ul li {
-    top: -60px;
-  }
-  .nav #ul li a {
-    font-size: 36px;
-  }
   #banner .contentenedor.active {
     flex-direction: column;
     top: -7vh;
@@ -397,10 +390,6 @@ header .main .headerbar .logo {
   }
   #socialMediaid {
     bottom: 65px;
-  }
-  .banner .contentenedor .imgBx {
-    width: 210px;
-    height: 210px;
   }
 }
 .nav {
@@ -461,7 +450,8 @@ header .main .headerbar .logo {
   padding: 0.5vh 2.5vw 0.5vh 2.5vw;
   padding-bottom: 35px;
   cursor: move;
-  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
   margin-bottom: 3vh;
 }
 .hero .detel .hero-texto .hero-texto1:hover {
@@ -539,14 +529,11 @@ header .main .headerbar .logo {
     z-index: 10;
     margin-left: 5vw;
   }
-  #herotexto .hero-texto1 {
-    width: 55vw;
+  .hero-texto1 {
+    width: 55vw !important;
   }
 }
 @media screen and (max-width: 968px) {
-  .hero {
-    top: -45px;
-  }
   .images .hero-retrato {
     display: none;
   }
@@ -564,8 +551,8 @@ header .main .headerbar .logo {
     display: none;
   }
   #herotexto .hero-texto1.active {
-    width: 70vw;
-    margin-left: 5px;
+    width: 70vw !important;
+    margin-left: 5px !important;
   }
   .detel span {
     display: none;
@@ -603,7 +590,6 @@ header .main .headerbar .logo {
   border-radius: 1em;
   background-color: #EBEBEB;
   overflow: hidden;
-  margin-left: -8%;
 }
 .carrousel li {
   list-style-type: none;
@@ -613,7 +599,8 @@ header .main .headerbar .logo {
 .carrousel textarea,
 .carrousel select,
 .carrousel button {
-  hyphens: auto;
+  -webkit-hyphens: auto;
+          hyphens: auto;
   background-color: transparent;
   display: block;
 }
@@ -635,17 +622,13 @@ header .main .headerbar .logo {
 }
 .carrousel .img {
   width: calc(50% - 2em);
-  min-width: 50vw;
-  min-height: 30vh;
+  min-height: 300px;
   max-height: 60vh;
   color: #333;
   transition: all 0.4s ease;
   border-radius: 1em;
   background-color: #EBEBEB;
   box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-}
-.carrousel .imgmovil {
-  display: none;
 }
 .carrousel .puntos {
   position: absolute;
@@ -673,11 +656,6 @@ header .main .headerbar .logo {
   box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
-@media screen and (min-width: 801px) {
-  .titulocarrusel {
-    color: transparent;
-  }
-}
 @media screen and (max-width: 800px) {
   .banner h2 {
     position: absolute;
@@ -697,16 +675,10 @@ header .main .headerbar .logo {
   }
   .carrousel.active {
     display: block;
+    margin-left: 5vw !important;
   }
   .puntos {
     left: 25vw;
-  }
-  .imgcompleta {
-    display: none;
-  }
-  #imgmovill {
-    display: flex;
-    min-height: 45vh;
   }
 }
 .contenedor-servicios {
@@ -798,9 +770,6 @@ header .main .headerbar .logo {
   }
 }
 @media screen and (max-width: 568px) {
-  h2 {
-    margin-left: 32vw;
-  }
   .contenedor-servicios {
     display: none;
   }
@@ -814,7 +783,7 @@ header .main .headerbar .logo {
 .content {
   width: calc(100vw - 300px);
   height: 60vh;
-  top: -10px;
+  margin-top: -20px;
   border-radius: 50px;
 }
 .content.active {
@@ -850,9 +819,6 @@ header .main .headerbar .logo {
 .content .contact-form form .block {
   grid-column: 1/3;
 }
-.content .contact-form form .block button {
-  font-family: "Source Serif Pro", serif;
-}
 .content .contact-form form button,
 .content .contact-form form input,
 .content .contact-form form textarea {
@@ -881,18 +847,18 @@ header .main .headerbar .logo {
   outline: 0;
   box-shadow: inset 6px 6px 10px -1px rgba(0, 0, 0, 0.1), inset -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-.content .contact-info {
+.content.contact-info {
   background: #EBEBEB;
   color: #53657D;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  font-family: "Source Serif Pro", serif;
-  font-style: italic;
 }
-.content .contact-info h4,
-.content .contact-info ul,
-.content .contact-info p {
+.content.contact-info h4,
+.content.contact-info ul,
+.content.contact-info p {
   text-align: center;
   margin: 0 0 1rem 0;
+  font-family: "Cormorant Garamond", serif;
+  font-family: "Raleway", sans-serif;
   font-family: "Source Serif Pro", serif;
 }
 
@@ -930,7 +896,6 @@ header .main .headerbar .logo {
   .content {
     display: none;
     border-radius: 50px;
-    margin-top: -50px;
   }
   .content.active {
     display: grid;
@@ -942,6 +907,4 @@ header .main .headerbar .logo {
     margin-top: 10px;
     width: 80vw;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

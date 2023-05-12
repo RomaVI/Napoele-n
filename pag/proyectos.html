@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -9,19 +9,19 @@
     content="Explora mi portafolio de proyectos de programación y trabajos en desarrollo web full stack, que incluyen animaciones. Como programador, he trabajado con HTML, CSS, JavaScript, React, Node.js, Git y más. ¡Descubre cómo puedo ayudarte con tu próximo proyecto de programación!">
   <!--El link de abajo es para un conjunto de iconos, es como los iconos de  boostrap pero no se si se pueden usar asi que no los uso -->
   <meta name="author" content="romano napoleon" />
-  <link rel="icon" href="../img/retrato6.ico">
+  <link rel="icon" href="./img/retrato6.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&family=Raleway:ital,wght@0,200;0,500;1,200;1,500&family=Source+Serif+Pro:ital,wght@0,300;1,300;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <title>Napoelóm</title>
+  <title>Proyectos |"Proyectos de Asus en colaboración con Adobe y la nueva GTX 4090Ti en Napoelóm" </title>
 </head>
 
 <body class="proyectos">
   <header class="header-container">
     <nav class="nav">
-      <ul>
+      <ul id="ul">
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="sobremi.html">Sobre mi</a></li>
         <li><a href="proyectos.html">Proyectos</a></li>
@@ -44,13 +44,15 @@
       </div>
     </div>
   </header>
-  <section class="banner" id="banner">
-    <h2>PROYECTOS</h2>
+  <div class="banner" id="banner">
+    <h2 class="titulocarrusel">PROYECTO</h2>
     <div class="carrousel">
-      <div class="grande">
-        <img src="../img/1.jpg" alt="Imagen 1" class="img">
-        <img src="../img/2.jpg" alt="Imagen 2" class="img">
-      </div>
+      <main class="grande">
+        <img src="../img/1.jpg" alt="Coloboracion de asus y adobe v. movil" class="img imgmovil" id="imgmovill">
+        <img src="../img/3.jpg" alt="Coloboracion de asus y adobe" class="img imgcompleta">
+        <img src="../img/2.jpg" alt="la nueva gtx 4090ti v. movil" class="img imgmovil" id="imgmovill">
+        <img src="../img/4.jpg" alt="la nueva gtx 4090ti" class="img imgcompleta ">
+      </main>
       <footer>
         <ul class="puntos">
           <li class="punto activo"></li>
@@ -58,7 +60,7 @@
         </ul>
       </footer>
     </div>
-  </section>
+  </div>
   <script src="../js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -71,7 +73,8 @@
     let toggle = document.querySelector('.toggle');
     let gran = document.querySelector(' .grande');
     let carrousel = document.querySelector(' .carrousel');
-    let proyectos = document.querySelector(' .proyectos'); //
+    let titulocarrusel = document.querySelector(' .titulocarrusel');
+    let proyectos = document.querySelector(' .proyectos');
     toggle.onclick = function () {
       toggle.classList.toggle('active');
       headerbar.classList.toggle('active');
@@ -80,6 +83,7 @@
       banner.classList.toggle('active');
       gran.classList.toggle('active');
       carrousel.classList.toggle('active');
+      titulocarrusel.classList.toggle('active');
       proyectos.classList.toggle('active');
     }
   </script>

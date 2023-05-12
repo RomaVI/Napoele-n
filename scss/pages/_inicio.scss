@@ -5,7 +5,7 @@
 }
 
 .nav {
-    position: fixed !important;
+    position: fixed;
     width: 300px;
     min-height: 100vh;
     height: 100vh;
@@ -47,7 +47,7 @@
                 white-space: normal;
                 /*"white-space:normal;" es una propiedad CSS que define cÃ³mo se deben manejar los espacios en blanco, en el caso de normal significa que cualquier espacio en blanco adicional, como tabulaciones, espacios y saltos de lÃ­nea, se reducen a un solo espacio. AdemÃ¡s, el texto se ajusta automÃ¡ticamente al ancho del contenedor en el que se encuentra, lo que puede dar lugar a lÃ­neas de texto mÃ¡s largas o mÃ¡s cortas segÃºn la resoluciÃ³n de la pantalla o el tamaÃ±o del contenedor.*/
                 display: flex;
-                
+
                 text-decoration: none;
                 color: $black;
                 font-size: 20px;
@@ -58,8 +58,8 @@
                 font-weight: 600;
 
                 font-family: 'Cormorant Garamond', serif;
-                
-               
+                font-size: 24px;
+
 
 
                 &:hover {
@@ -182,8 +182,8 @@ header {
 
         .imgBx {
             position: relative;
-            width: 250px;
-            height: 250px;
+            width: 230px;
+            height: 230px;
             overflow: hidden;
             border-radius: 50%;
             margin-bottom: -3vh;
@@ -202,6 +202,7 @@ header {
 
         h3 {
             font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
             position: relative;
             font-size: 1.4em;
             color: $gris;
@@ -266,9 +267,18 @@ header {
         align-items: center;
         margin-top: -60px;
         font-size: 23px;
+
+        #ul li {
+            top: -60px;
+
+
+            a {
+                font-size: 36px ;
+            }
+        }
     }
+
     #banner .contentenedor.active {
-        display: fixed;
         flex-direction: column;
         top: -7vh;
     }
@@ -280,10 +290,12 @@ header {
             top: 5vh;
         }
     }
-    #contentenedorid.active{
-        display: flex ;
+
+    #contentenedorid.active {
+        display: flex;
     }
-    #contentenedorid{
+
+    #contentenedorid {
         margin-top: 23px;
         display: none;
     }
@@ -303,7 +315,13 @@ header {
     .inicio.active {
         overflow-y: scroll;
     }
-    #socialMediaid{
+
+    #socialMediaid {
         bottom: 65px;
+    }
+
+    .banner .contentenedor .imgBx {
+        width: 210px;
+        height: 210px;
     }
 }
