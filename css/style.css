@@ -706,6 +706,10 @@ header .main .headerbar .logo {
     display: flex;
     min-height: 45vh;
   }
+  #imgmovilll {
+    display: flex;
+    min-height: 45vh;
+  }
 }
 .contenedor-servicios {
   margin-top: -100px;
