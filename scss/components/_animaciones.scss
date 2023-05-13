@@ -1,34 +1,38 @@
 /*Animacion del Inicio o index*/
-.headerbar .logo h1::after {
-    content: "CODERBY";
-    font-size: 1.1rem;
-    margin-left: -140px;
-    display: flex;
-    padding-top: 20px;
-    position: relative;
-    z-index: 10000;
-    color: var(--gris);
-
-}
-
-.headerbar .logo h1:hover:after {
-    content: "";
-    /*La verdad es que no sabia como escribir el h1 de modo 
-    que cambiara de palabra con el hover porque seguia apareciendo asi que
-    se me ocurrio esto :D*/
-    position: relative;
-
-}
-
-.headerbar .logo h1:hover:before {
-    content: "NAPOLEON ROMANO";
-    font-size: 1.1rem;
-    margin-left: -85px;
-    display: flex;
-    padding-top: 20px;
-    position: relative;
-    color: var(--gris);
-}
+.headerbar {
+    .logo {
+      h1 {
+        &::after {
+          content: "CODERBY";
+          font-size: 1.1rem;
+          margin-left: -140px;
+          display: flex;
+          padding-top: 20px;
+          position: relative;
+          z-index: 10000;
+          color: var(--gris);
+        }
+  
+        &:hover::after {
+          content: "";
+          /*La verdad es que no sabia como escribir el h1 de modo 
+          que cambiara de palabra con el hover porque seguia apareciendo asi que
+          se me ocurrio esto :D*/
+          position: relative;
+        }
+  
+        &:hover::before {
+          content: "NAPOLEON ROMANO";
+          font-size: 1.1rem;
+          margin-left: -85px;
+          display: flex;
+          padding-top: 20px;
+          position: relative;
+          color: var(--gris);
+        }
+      }
+    }
+  }
 
 /*Termina la animacion del logo*/
 

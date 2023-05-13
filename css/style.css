@@ -33,16 +33,14 @@ body::-webkit-scrollbar-thumb {
   z-index: 10000;
   color: var(--gris);
 }
-
-.headerbar .logo h1:hover:after {
+.headerbar .logo h1:hover::after {
   content: "";
   /*La verdad es que no sabia como escribir el h1 de modo 
   que cambiara de palabra con el hover porque seguia apareciendo asi que
   se me ocurrio esto :D*/
   position: relative;
 }
-
-.headerbar .logo h1:hover:before {
+.headerbar .logo h1:hover::before {
   content: "NAPOLEON ROMANO";
   font-size: 1.1rem;
   margin-left: -85px;
@@ -53,7 +51,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*Termina la animacion del logo*/
-/* animacion del boton de descarga cv */
+/*  del boton de descarga cv */
 .block-btn-cv {
   background: #EBEBEB;
   z-index: 0;
@@ -96,7 +94,7 @@ body::-webkit-scrollbar-thumb {
 
 /*Termina el boton de cv*/
 /*Boton Hamburguesa*/
-.headerbar .toggle button {
+.headerbar .toggle div {
   border: none;
 }
 
@@ -751,8 +749,6 @@ header .main .headerbar .logo {
   font-size: 14px;
   margin-bottom: 5px;
   font-style: italic;
-  font-family: "Cormorant Garamond", serif;
-  font-family: "Raleway", sans-serif;
   font-family: "Source Serif Pro", serif;
 }
 .contenedor-servicios .container-card .card .contenido-card a {
@@ -834,7 +830,7 @@ header .main .headerbar .logo {
   background: #EBEBEB;
   color: #53657D;
   font-style: italic;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Cormorant Garamond", serif;
 }
 .content .contact-form form {
   display: grid;
@@ -851,7 +847,7 @@ header .main .headerbar .logo {
   grid-column: 1/3;
 }
 .content .contact-form form .block button {
-  font-family: "Source Serif Pro", serif;
+  font-family: "Cormorant Garamond", serif;
 }
 .content .contact-form form button,
 .content .contact-form form input,
@@ -885,7 +881,7 @@ header .main .headerbar .logo {
   background: #EBEBEB;
   color: #53657D;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.1), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-  font-family: "Source Serif Pro", serif;
+  font-family: "Cormorant Garamond", serif;
   font-style: italic;
 }
 .content .contact-info h4,
@@ -893,7 +889,7 @@ header .main .headerbar .logo {
 .content .contact-info p {
   text-align: center;
   margin: 0 0 1rem 0;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 @media screen and (min-width: 700px) {
@@ -901,17 +897,17 @@ header .main .headerbar .logo {
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
-  .content {
-    margin-top: -50px;
-    display: grid;
-  }
   .contact-wrapper > * {
     padding: 1em;
   }
-  .contact-info h4,
-  .contact-info ul,
-  .contact-info p {
+  .contact-wrapper .contact-info h4,
+  .contact-wrapper .contact-info ul,
+  .contact-wrapper .contact-info p {
     text-align: left;
+  }
+  .content {
+    margin-top: -50px;
+    display: grid;
   }
 }
 @media screen and (max-width: 700px) {
@@ -927,18 +923,18 @@ header .main .headerbar .logo {
   #banner .content .contact-wrapper .contact-form form p {
     flex: 1 1 auto;
   }
-  .content {
+  #banner .content {
     display: none;
     border-radius: 50px;
     margin-top: -50px;
   }
-  .content.active {
+  #banner .content.active {
     display: grid;
   }
-  .contacto.active {
+  #banner .contacto.active {
     overflow-y: scroll;
   }
-  #btnEnviar {
+  #banner #btnEnviar {
     margin-top: 10px;
     width: 80vw;
   }

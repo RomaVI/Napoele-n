@@ -57,7 +57,7 @@
                 font-style: italic;
                 font-weight: 600;
 
-                font-family: 'Cormorant Garamond', serif;
+                font-family: $font2;
                 font-size: 24px;
 
 
@@ -201,7 +201,7 @@ header {
         }
 
         h3 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: $font2;
             font-style: italic;
             position: relative;
             font-size: 1.4em;
@@ -214,7 +214,7 @@ header {
         p {
             color: $gris;
             padding-bottom: 2vh;
-            font-family: 'Source Serif Pro', serif;
+            font-family: $font1;
             font-weight: 500;
             font-style: italic;
         }
@@ -258,7 +258,6 @@ header {
         }
     }
 }
-
 @media screen and (max-width: 578px) {
     .nav {
         margin: 0;
@@ -271,9 +270,8 @@ header {
         #ul li {
             top: -60px;
 
-
             a {
-                font-size: 36px ;
+                font-size: 36px;
             }
         }
     }
@@ -305,8 +303,6 @@ header {
         top: -5px;
     }
 
-
-
     #headerbar {
         left: 0px;
         width: 100vw;
@@ -320,8 +316,10 @@ header {
         bottom: 65px;
     }
 
-    .banner .contentenedor .imgBx {
-        width: 210px;
-        height: 210px;
+    .banner .contentenedor {
+        .imgBx {
+            width: 210px;
+            height: 210px;
+        }
     }
 }

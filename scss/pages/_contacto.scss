@@ -27,7 +27,7 @@
         background: $white;
         color: $gris;
         font-style: italic;
-        font-family: 'Source Serif Pro', serif;
+        font-family: $font2;
 
         form {
             display: grid;
@@ -45,8 +45,9 @@
 
             .block {
                 grid-column: 1 / 3;
-                button{
-                    font-family: 'Source Serif Pro', serif;
+
+                button {
+                    font-family: $font2;
                 }
             }
 
@@ -89,7 +90,7 @@
         background: $white;
         color: $gris;
         box-shadow: $sombra;
-        font-family: 'Source Serif Pro', serif;
+        font-family: $font2;
         font-style: italic;
 
         h4,
@@ -97,7 +98,7 @@
         p {
             text-align: center;
             margin: 0 0 1rem 0;
-            font-family: 'Source Serif Pro', serif;
+            font-family: $font2;
         }
     }
 }
@@ -106,21 +107,24 @@
     .contact-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
+
+        >* {
+            padding: 1em;
+        }
+
+        .contact-info {
+
+            h4,
+            ul,
+            p {
+                text-align: left;
+            }
+        }
     }
 
     .content {
         margin-top: -50px;
         display: grid;
-    }
-
-    .contact-wrapper>* {
-        padding: 1em;
-    }
-
-    .contact-info h4,
-    .contact-info ul,
-    .contact-info p {
-        text-align: left;
     }
 }
 
@@ -131,31 +135,39 @@
 }
 
 @media screen and (max-width: 568px) {
-    #banner .content .contact-wrapper .contact-form form {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    #banner {
+        .content {
+            .contact-wrapper {
+                .contact-form {
+                    form {
+                        display: flex;
+                        flex-wrap: wrap;
 
-    #banner .content .contact-wrapper .contact-form form p {
-        flex: 1 1 auto;
-    }
+                        p {
+                            flex: 1 1 auto;
+                        }
+                    }
+                }
+            }
+        }
 
-    .content {
-        display: none;
-        border-radius: 50px;
-        margin-top: -50px ;
-    }
+        .content {
+            display: none;
+            border-radius: 50px;
+            margin-top: -50px;
 
-    .content.active {
-        display: grid;
-    }
+            &.active {
+                display: grid;
+            }
+        }
 
-    .contacto.active {
-        overflow-y: scroll;
-    }
+        .contacto.active {
+            overflow-y: scroll;
+        }
 
-    #btnEnviar {
-        margin-top: 10px;
-        width: 80vw;
+        #btnEnviar {
+            margin-top: 10px;
+            width: 80vw;
+        }
     }
 }
