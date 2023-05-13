@@ -33,11 +33,11 @@
     <header class="header-container">
         <nav class="nav">
             <ul id="ul">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="./pag/sobremi.html">Sobre mi</a></li>
-                <li><a href="./pag/proyectos.html">Proyectos</a></li>
-                <li><a href="./pag/servicios.html">Servicios</a></li>
-                <li><a href="./pag/contacto.html">Contacto</a></li>
+                <li><a title="index" href="index.html">Inicio</a></li>
+                <li><a title="sobremi" href="./pag/sobremi.html">Sobre mi</a></li>
+                <li><a title="proyectos" href="./pag/proyectos.html">Proyectos</a></li>
+                <li><a title="servicios" href="./pag/servicios.html">Servicios</a></li>
+                <li><a title="contacto" href="./pag/contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <div class="main">
@@ -67,19 +67,20 @@
             </div>
             <footer>
                 <ul class="socialMedia" id="socialMediaid">
-                    <li><a href="https://mail.google.com" target="_blank"><i aria-hidden="true"
+                    <li><a href="https://mail.google.com"  title="gmail" target="_blank"><i aria-hidden="true"
                                 class="fa fa-google"></i></a></li>
-                    <li><a href="https://twitter.com" target="_blank"><i aria-hidden="true"
+                    <li><a href="https://twitter.com"  title="twitter" target="_blank"><i aria-hidden="true"
                                 class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://www.linkedin.com" target="_blank"><i aria-hidden="true"
+                    <li><a href="https://www.linkedin.com" title="linkedin" target="_blank"><i aria-hidden="true"
                                 class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/" target="_blank"><i aria-hidden="true"
+                    <li><a href="https://github.com/"  title="github" target="_blank"><i aria-hidden="true"
                                 class="fa fa-github"></i></a></li>
                 </ul>
 
             </footer>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         let headerbar = document.querySelector('.headerbar');
         let nav = document.querySelector(' .nav');
